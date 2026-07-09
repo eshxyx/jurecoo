@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас — Jureco Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="inner.css">
+</head>
+<body id="top">
+
+<!-- HEADER -->
+<header class="hd solid">
+    <a href="index.html" class="hd-logo" aria-label="Jureco Consulting — головна">
+        <img src="photos/logo.png" alt="Jureco Consulting">
+    </a>
+
+    <nav class="hd-nav" aria-label="Основна навігація">
+        <div class="hd-item">
+            <button class="hd-link" aria-haspopup="true">Послуги <span class="tick">&#9662;</span></button>
+            <div class="hd-drop">
+                <div class="hd-drop-label">Екологічні послуги</div>
+                <div class="hd-drop-grid">
+                    <a href="eia.html">
+                        <span class="n">01</span>
+                        <span><span class="t">ОВД — Оцінка впливу на довкілля</span><span class="s">Процедура та дозволи перед початком діяльності</span></span>
+                    </a>
+                    <a href="lap.html">
+                        <span class="n">02</span>
+                        <span><span class="t">ІЕД — Інтегрований екологічний дозвіл</span><span class="s">Відповідність Директиві ЄС 2010/75/EU</span></span>
+                    </a>
+                    <a href="sea.html">
+                        <span class="n">03</span>
+                        <span><span class="t">СЕО — Стратегічна екологічна оцінка</span><span class="s">Процедура для документів державного планування</span></span>
+                    </a>
+                    <a href="lwmp.html">
+                        <span class="n">04</span>
+                        <span><span class="t">МПУВ — Місцевий план управління відходами</span><span class="s">Планування на рівні громади</span></span>
+                    </a>
+                    <a href="mep.html">
+                        <span class="n">05</span>
+                        <span><span class="t">МЕП — Муніципальний енергетичний план</span><span class="s">Місцева енергоефективність та відновлювані джерела</span></span>
+                    </a>
+                    <a href="cds.html">
+                        <span class="n">06</span>
+                        <span><span class="t">СРГ — Стратегія розвитку громади</span><span class="s">Інтегрований план розвитку громади</span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hd-item">
+            <button class="hd-link" aria-haspopup="true">Про нас <span class="tick">&#9662;</span></button>
+            <div class="hd-drop narrow">
+                <div class="hd-drop-grid">
+                    <a href="about.html#team">
+                        <span class="n">a.</span>
+                        <span><span class="t">Наша команда</span><span class="s">Інженери та юридичні експерти</span></span>
+                    </a>
+                    <a href="about.html#story">
+                        <span class="n">b.</span>
+                        <span><span class="t">Наша історія</span><span class="s">Засновано у 2026 році</span></span>
+                    </a>
+                    <a href="#">
+                        <span class="n">c.</span>
+                        <span><span class="t">Новини та аналітика</span><span class="s">Оновлення законодавства</span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <a href="#contact" class="hd-cta"><span>Зв'язатися з нами</span></a>
+
+    <button class="hd-burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<nav class="m-menu" aria-label="Мобільне меню">
+    <div class="grp">Екологічні послуги</div>
+    <a href="eia.html"><span>01</span>ОВД — Оцінка впливу на довкілля</a>
+    <a href="lap.html"><span>02</span>ІЕД — Інтегрований екологічний дозвіл</a>
+    <a href="sea.html"><span>03</span>СЕО — Стратегічна екологічна оцінка</a>
+    <a href="lwmp.html"><span>04</span>МПУВ — Місцевий план управління відходами</a>
+    <a href="mep.html"><span>05</span>МЕП — Муніципальний енергетичний план</a>
+    <a href="cds.html"><span>06</span>СРГ — Стратегія розвитку громади</a>
+    <div class="grp">Про нас</div>
+    <a href="about.html#team">Наша команда</a>
+    <a href="about.html#story">Наша історія</a>
+    <a href="#">Новини та аналітика</a>
+    <a href="#contact" class="m-cta">Зв'язатися з нами</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb-bar">
+    <div class="breadcrumbs">
+        <a href="index.html">Головна</a>
+        <span class="bc-sep">/</span>
+        <span class="bc-current">Про нас</span>
+    </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="eia-hero fade-up">
+    <div class="hero-text">
+        <div class="tag-mono">✦ Хто ми</div>
+        <h1 class="hero-h1">
+            Спочатку інженери.<br>
+            <span class="accent">Консультанти<br>за фахом.</span>
+        </h1>
+        <p class="hero-para">Jureco Consulting заснована екологічними інженерами, які роками працювали на виробничих об'єктах, очисних спорудах та в державних установах експертизи — перш ніж перетворити цей практичний досвід на стратегічний еко-консалтинг для промисловості.</p>
+    </div>
+    <div class="hero-img-frame">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80" alt="Інженерна команда переглядає документацію об'єкта">
+    </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-row fade-up">
+    <div class="stat-cell">
+        <div class="stat-num">2026</div>
+        <div class="stat-label">Засновано цього року</div>
+    </div>
+    <div class="stat-cell">
+        <div class="stat-num">100<span>%</span></div>
+        <div class="stat-label">Проходження експертизи з 1-го разу</div>
+    </div>
+    <div class="stat-cell">
+        <div class="stat-num">Прямий<span> доступ</span></div>
+        <div class="stat-label">До провідних інженерів</div>
+    </div>
+    <div class="stat-cell">
+        <div class="stat-num">ЄС<span>/UA</span></div>
+        <div class="stat-label">Подвійний стандарт відповідності</div>
+    </div>
+</div>
+
+<!-- STORY -->
+<section id="story" class="definition-block fade-up">
+    <div>
+        <div class="section-eyebrow">✦ Наша історія</div>
+        <h2 class="block-title">З поля <span class="accent">до кабінету керівництва</span></h2>
+        <div class="rich-body">
+            <p>Jureco Consulting розпочала роботу у 2026 році. Її заснували сертифіковані екологічні інженери та юридичні експерти, які роками працювали безпосередньо на виробничих об'єктах, очисних спорудах та в державних установах експертизи, перш ніж вирішили консультувати самостійно.</p>
+            <p>Саме цей практичний досвід є основою нашої роботи. Ми не продаємо шаблони. Кожен звіт ОВД, кожен дозвіл, кожна стратегія управління відходами розробляється з нуля під реальні технічні умови об'єкта та його юридичні ризики.</p>
+            <p>Ми підтримуємо виробничі підприємства, енергетичні компанії, операторів відходів та органи місцевого самоврядування в Україні та ЄС, поєднуючи інженерну глибину з регуляторною та юридичною експертизою в одній команді.</p>
+        </div>
+        <div class="law-box">
+            <div class="law-icon">i</div>
+            <p>Працюємо за методологією ISO 14001:2015, у відповідності зі стандартами EU BREF, EMAS III та Директивою IPPC.</p>
+        </div>
+    </div>
+    <div>
+        <div class="img-bordered">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Обстеження промислового об'єкта">
+        </div>
+    </div>
+</section>
+
+<!-- MISSION / VALUES -->
+<section class="scope-block fade-up">
+    <div class="center-head">
+        <div class="tag-mono" style="margin:0 auto 18px;">✦ Що нас рухає</div>
+        <h2 class="block-title">Наша місія <span class="accent">та цінності</span></h2>
+        <p class="section-sub">Ми вимірюємо успіх тим, наскільки чисто проєкт проходить регуляторну перевірку — і скільки ризику він залишає після себе для підприємства, яке нас найняло.</p>
+    </div>
+    <div class="three-grid">
+        <div class="scope-card">
+            <span class="card-num">01</span>
+            <h3>Технічна добросовісність</h3>
+            <p>Кожен звіт ґрунтується на реальних польових даних — вибірках, моделюванні та перевірці на місці — а не на копіюванні шаблонів.</p>
+        </div>
+        <div class="scope-card">
+            <span class="card-num">02</span>
+            <h3>Регуляторна точність</h3>
+            <p>Ми постійно стежимо за українським та європейським екологічним законодавством, щоб документи клієнтів відповідали чинному стандарту, а не торішньому.</p>
+        </div>
+        <div class="scope-card">
+            <span class="card-num">03</span>
+            <h3>Довгострокова співпраця</h3>
+            <p>Ми залишаємось поруч після видачі дозволу, підтримуючи аудити, продовження строків та наступний етап розвитку об'єкта.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" class="section fade-up">
+    <div class="section-header">
+        <div>
+            <div class="section-tag">✦ Наша команда</div>
+            <h2 class="section-title">Люди, <em>які стоять за роботою</em></h2>
+        </div>
+    </div>
+    <div class="testi-grid">
+        <div class="testi-card">
+            <div class="testi-author" style="margin-bottom:16px;">
+                <div class="testi-avatar av1">ОК</div>
+                <div>
+                    <div class="testi-name">Олена Коваленко</div>
+                    <div class="testi-loc">Засновниця та головний екологічний інженер</div>
+                </div>
+            </div>
+            <p class="testi-text">20 років оцінює промисловий вплив в енергетичному та хімічному секторах. Керує інженерною експертизою ОВД та ІЕД.</p>
+        </div>
+        <div class="testi-card">
+            <div class="testi-author" style="margin-bottom:16px;">
+                <div class="testi-avatar av2">МП</div>
+                <div>
+                    <div class="testi-name">Микола Петренко</div>
+                    <div class="testi-loc">Керівник юридичного та регуляторного відділу</div>
+                </div>
+            </div>
+            <p class="testi-text">Спеціалізується на гармонізації з директивами ЄС та представляє клієнтів перед органами державної експертизи.</p>
+        </div>
+        <div class="testi-card">
+            <div class="testi-author" style="margin-bottom:16px;">
+                <div class="testi-avatar av3">ІС</div>
+                <div>
+                    <div class="testi-name">Ірина Симоненко</div>
+                    <div class="testi-loc">Провідний фахівець з управління відходами та водними ресурсами</div>
+                </div>
+            </div>
+            <p class="testi-text">Розробляє стратегії утилізації відходів та спецводокористування для виробничих підприємств і органів місцевого самоврядування.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="timeline-block fade-up">
+    <div class="center-head">
+        <div class="tag-mono" style="margin:0 auto 18px;">✦ Куди ми йдемо</div>
+        <h2 class="block-title">Нова практика, <span class="accent">побудована на досвіді</span></h2>
+    </div>
+    <div class="timeline-wrap">
+        <div class="timeline-axis"></div>
+
+        <div class="tl-row">
+            <div class="tl-dot">1</div>
+            <div class="tl-box">
+                <span class="tl-period">2026</span>
+                <h3>Запуск Jureco Consulting</h3>
+                <p>Заснована інженерами та юридичними експертами, які здобули кар'єрний досвід на виробничих об'єктах, очисних спорудах та в установах державної експертизи, перш ніж почати консультувати самостійно.</p>
+            </div>
+        </div>
+
+        <div class="tl-row right">
+            <div class="tl-dot">2</div>
+            <div class="tl-box">
+                <span class="tl-period">Перші проєкти</span>
+                <h3>Прямі, практичні проєкти</h3>
+                <p>Тісна співпраця з першими клієнтами щодо ОВД, ІЕД та управління відходами — із тією ж ретельністю, що й на найбільших промислових об'єктах.</p>
+            </div>
+        </div>
+
+        <div class="tl-row">
+            <div class="tl-dot">3</div>
+            <div class="tl-box">
+                <span class="tl-period">Попереду</span>
+                <h3>Зростання команди</h3>
+                <p>Розширюємо інженерний та юридичний штат у міру роботи з більшою кількістю виробничих, енергетичних та муніципальних клієнтів в Україні та ЄС.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FORM -->
+<!-- CTA FORM -->
+<section id="contact" class="audit">
+    <div class="audit-grid">
+        <div class="audit-copy">
+            <span class="eyebrow r-up">Працюйте з нами</span>
+            <h2 class="r-up">Поговорімо про ваш проєкт</h2>
+            <p class="audit-lead r-up">Розкажіть нам про свій об'єкт, і ми з'єднаємо вас із потрібним фахівцем нашої команди для початкової діагностики.</p>
+        </div>
+
+        <form id="cta-audit-form" class="audit-form r-up" action="https://formspree.io/f/mqevwaqk" method="POST">
+            <div class="field">
+                <label for="f-company">Назва компанії</label>
+                <input id="f-company" type="text" name="company" autocomplete="organization" required>
+            </div>
+            <div class="field">
+                <label for="f-email">Робоча електронна пошта</label>
+                <input id="f-email" type="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+                <label for="f-phone">Контактний телефон</label>
+                <input id="f-phone" type="tel" name="phone" autocomplete="tel" required>
+            </div>
+            <div class="field">
+                <label for="f-message">Що вам потрібно?</label>
+                <textarea id="f-message" name="message" rows="3" required></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="Нова заявка — JURECO (Про нас)">
+            <button type="submit" class="btn-main btn-submit"><span class="lbl">Замовити регуляторний аудит</span></button>
+            <p class="form-status" aria-live="polite"></p>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+    <div class="foot-word" aria-hidden="true">Jureco</div>
+    <div class="foot-row">
+        <span>&#169; 2026 Jureco Consulting</span>
+        <a href="mailto:info@jureco.com">info@jureco.com</a>
+        <a href="#top">Повернутися наверх &#8593;</a>
+    </div>
+</footer>
+
+<script src="home.js"></script>
+<script src="inner.js"></script>
+<script src="form-handler.js"></script>
+</body>
+</html>

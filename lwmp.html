@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Місцевий план управління відходами (МПУВ) — Jureco Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="inner.css">
+</head>
+<body id="top">
+
+<!-- HEADER -->
+<header class="hd solid">
+    <a href="index.html" class="hd-logo" aria-label="Jureco Consulting — головна">
+        <img src="photos/logo.png" alt="Jureco Consulting">
+    </a>
+
+    <nav class="hd-nav" aria-label="Основна навігація">
+        <div class="hd-item">
+            <button class="hd-link" aria-haspopup="true">Послуги <span class="tick">&#9662;</span></button>
+            <div class="hd-drop">
+                <div class="hd-drop-label">Екологічні послуги</div>
+                <div class="hd-drop-grid">
+                    <a href="eia.html">
+                        <span class="n">01</span>
+                        <span><span class="t">ОВД — Оцінка впливу на довкілля</span><span class="s">Процедура та дозволи перед початком діяльності</span></span>
+                    </a>
+                    <a href="lap.html">
+                        <span class="n">02</span>
+                        <span><span class="t">ІЕД — Інтегрований екологічний дозвіл</span><span class="s">Відповідність Директиві ЄС 2010/75/EU</span></span>
+                    </a>
+                    <a href="sea.html">
+                        <span class="n">03</span>
+                        <span><span class="t">СЕО — Стратегічна екологічна оцінка</span><span class="s">Процедура для документів державного планування</span></span>
+                    </a>
+                    <a href="lwmp.html">
+                        <span class="n">04</span>
+                        <span><span class="t">МПУВ — Місцевий план управління відходами</span><span class="s">Планування на рівні громади</span></span>
+                    </a>
+                    <a href="mep.html">
+                        <span class="n">05</span>
+                        <span><span class="t">МЕП — Муніципальний енергетичний план</span><span class="s">Місцева енергоефективність та відновлювані джерела</span></span>
+                    </a>
+                    <a href="cds.html">
+                        <span class="n">06</span>
+                        <span><span class="t">СРГ — Стратегія розвитку громади</span><span class="s">Інтегрований план розвитку громади</span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hd-item">
+            <button class="hd-link" aria-haspopup="true">Про нас <span class="tick">&#9662;</span></button>
+            <div class="hd-drop narrow">
+                <div class="hd-drop-grid">
+                    <a href="about.html#team">
+                        <span class="n">a.</span>
+                        <span><span class="t">Наша команда</span><span class="s">Інженери та юридичні експерти</span></span>
+                    </a>
+                    <a href="about.html#story">
+                        <span class="n">b.</span>
+                        <span><span class="t">Наша історія</span><span class="s">Засновано у 2026 році</span></span>
+                    </a>
+                    <a href="#">
+                        <span class="n">c.</span>
+                        <span><span class="t">Новини та аналітика</span><span class="s">Оновлення законодавства</span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <a href="#contact" class="hd-cta"><span>Зв'язатися з нами</span></a>
+
+    <button class="hd-burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<nav class="m-menu" aria-label="Мобільне меню">
+    <div class="grp">Екологічні послуги</div>
+    <a href="eia.html"><span>01</span>ОВД — Оцінка впливу на довкілля</a>
+    <a href="lap.html"><span>02</span>ІЕД — Інтегрований екологічний дозвіл</a>
+    <a href="sea.html"><span>03</span>СЕО — Стратегічна екологічна оцінка</a>
+    <a href="lwmp.html"><span>04</span>МПУВ — Місцевий план управління відходами</a>
+    <a href="mep.html"><span>05</span>МЕП — Муніципальний енергетичний план</a>
+    <a href="cds.html"><span>06</span>СРГ — Стратегія розвитку громади</a>
+    <div class="grp">Про нас</div>
+    <a href="about.html#team">Наша команда</a>
+    <a href="about.html#story">Наша історія</a>
+    <a href="#">Новини та аналітика</a>
+    <a href="#contact" class="m-cta">Зв'язатися з нами</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<nav class="bc-bar">
+    <div class="bc">
+        <a href="index.html">Головна</a>
+        <span class="bc-sep">/</span>
+        <a href="index.html">Послуги</a>
+        <span class="bc-sep">/</span>
+        <a href="index.html">Управління відходами</a>
+        <span class="bc-sep">/</span>
+        <span class="bc-cur">Місцевий план управління відходами</span>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="lwmp-hero fade-up">
+    <div>
+        <div class="hero-tag-row">
+            <span class="tag-mono">✦ Управління відходами</span>
+            <span class="pill pill-eu">Закон № 2320-IX</span>
+            <span class="pill pill-new">Постанова КМУ 947/2023</span>
+        </div>
+        <h1 class="hero-h1">
+            Місцевий план<br>управління<br>
+            <span class="accent">відходами<br>(МПУВ)</span>
+        </h1>
+        <p class="hero-sub">Обов'язковий документ державного планування, що містить узгоджений набір завдань і заходів для сталого управління відходами на території територіальної громади — обов'язковий для кожної громади в Україні.</p>
+        <div class="hero-law-strip">
+            <span class="law-star">⚖</span>
+            <p>Регулюється Законом України <strong>«Про управління відходами»</strong> № 2320-IX · Постановою КМУ № <strong>947 від 5 вересня 2023 року</strong> · Методичними рекомендаціями Мінекоенерго, наказ № <strong>288 від 15 березня 2024 року</strong>.</p>
+        </div>
+    </div>
+    <div>
+        <div class="hero-img-wrap">
+            <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=900&q=80" alt="Планування інфраструктури управління відходами громади">
+            <div class="hero-badge">
+                <div class="hero-badge-num">10</div>
+                <div class="hero-badge-sub">Років горизонт<br>планування</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-row fade-up">
+    <div class="stat">
+        <div class="stat-n">3<span>-й</span></div>
+        <div class="stat-l">Рівень 4-рівневої системи планування</div>
+    </div>
+    <div class="stat">
+        <div class="stat-n">10<span> років</span></div>
+        <div class="stat-l">Термін дії документа</div>
+    </div>
+    <div class="stat">
+        <div class="stat-n">4<span> р.</span></div>
+        <div class="stat-l">Максимальний цикл перегляду</div>
+    </div>
+    <div class="stat">
+        <div class="stat-n">1<span> бер.</span></div>
+        <div class="stat-l">Термін щорічного звіту з моніторингу</div>
+    </div>
+</div>
+
+<!-- DEFINITION BLOCK -->
+<section class="def-block fade-up">
+    <div>
+        <div class="eyebrow">✦ Визначення</div>
+        <h2 class="section-title">Що таке <span class="accent">місцевий план<br>управління відходами?</span></h2>
+        <div class="rich">
+            <p><strong>Місцевий план управління відходами (МПУВ)</strong> — це документ державного планування, що містить узгоджений набір взаємопов'язаних завдань і заходів — погоджених за термінами та ресурсним забезпеченням з усіма відповідальними сторонами — спрямованих на забезпечення <strong>сталого управління відходами</strong> в межах населених пунктів територіальної громади.</p>
+            <p>План будується на основі <strong>оцінки поточного стану</strong> управління відходами в громаді: видів і обсягів утворюваних відходів, наявних місць видалення та їхніх характеристик, діючих підприємств з управління відходами та їхньої технічної спроможності, необхідної додаткової інфраструктури, оцінки витрат та джерел фінансування.</p>
+            <p>Він враховує <strong>принципи міжмуніципальної співпраці</strong> між органами місцевого самоврядування та розробляється на основі вже встановлених регіональних моделей. МПУВ є <strong>третім з чотирьох рівнів планування</strong> в реформованій системі управління відходами в Україні.</p>
+        </div>
+        <div class="info-card">
+            <div class="ic-dot"></div>
+            <p>Розробляється відповідно до <strong>статті 26, частини 2, пункту 1</strong> Закону України «Про управління відходами». Порядок розроблення, схвалення та затвердження встановлено <strong>Постановою КМУ № 947 від 5 вересня 2023 року</strong>. Методичні рекомендації видані Мінекоенерго <strong>15 березня 2024 року (наказ № 288)</strong>.</p>
+        </div>
+    </div>
+    <div>
+        <div class="img-frame">
+            <img src="https://images.unsplash.com/photo-1595278069441-2cf29f8005a4?auto=format&fit=crop&w=800&q=80" alt="Інфраструктура та планування управління відходами">
+        </div>
+    </div>
+</section>
+
+<!-- 4-LEVEL PLANNING HIERARCHY -->
+<section class="levels-block fade-up">
+    <div class="center-head">
+        <span class="tag-mono tag-mono-center">✦ Архітектура планування</span>
+        <h2 class="section-title">Чотирирівнева система <span class="accent">планування<br>відходів в Україні</span></h2>
+        <p>МПУВ входить у структуровану національну ієрархію управління відходами — кожен рівень є обов'язковим для нижчих.</p>
+    </div>
+    <div class="levels-chain">
+        <div class="level-item">
+            <div class="level-num">1</div>
+            <div class="level-text">
+                <h3>Національна стратегія управління відходами</h3>
+                <p>Державний рівень · Довгострокові рамки та цілі узгодження з ЄС</p>
+            </div>
+            <span class="level-arrow">↓</span>
+        </div>
+        <div class="level-item">
+            <div class="level-num">2</div>
+            <div class="level-text">
+                <h3>Регіональний план управління відходами</h3>
+                <p>Обласний рівень · Галузеві програми та міжгромадська координація</p>
+            </div>
+            <span class="level-arrow">↓</span>
+        </div>
+        <div class="level-item active-level">
+            <div class="level-num">3</div>
+            <div class="level-text">
+                <h3>Місцевий план управління відходами <em class="level-here-tag">← Ви тут</em></h3>
+                <p>Рівень громади · Зобов'язання громади та місцева інфраструктура</p>
+            </div>
+            <span class="level-arrow">↓</span>
+        </div>
+        <div class="level-item">
+            <div class="level-num">4</div>
+            <div class="level-text">
+                <h3>План управління відходами підприємства</h3>
+                <p>Рівень об'єкта · Операційне поводження з відходами та дозволи на видалення</p>
+            </div>
+        </div>
+    </div>
+    <p class="levels-footnote">МПУВ має бути оновлений протягом 6 місяців з моменту будь-якої зміни відповідного регіонального плану.</p>
+</section>
+
+<!-- WHAT IT MUST INCLUDE / WHO DEVELOPS IT -->
+<section class="who-dev-block fade-up">
+    <div class="center-head">
+        <span class="tag-mono tag-mono-center">✦ Вимоги до документа</span>
+        <h2 class="section-title">Що повинен <span class="accent">врахувати МПУВ</span></h2>
+        <p>Розробляється за участю науковців, експертів, громадськості та підприємств, що працюють на території — план повинен ґрунтуватись на фактичному аналізі місцевих реалій управління відходами.</p>
+    </div>
+    <div class="who-dev-grid">
+        <div>
+            <ul class="oblig-check-list">
+                <li><span class="oc-arrow">→</span>Інвентаризація поточного стану: види, обсяги відходів, наявні об'єкти видалення та їхні технічні характеристики</li>
+                <li><span class="oc-arrow">→</span>Діючі підприємства з управління відходами — їхня технічна спроможність та зона обслуговування</li>
+                <li><span class="oc-arrow">→</span>Необхідна додаткова інфраструктура переробки відходів з оцінкою витрат та визначеними джерелами фінансування</li>
+                <li><span class="oc-arrow">→</span>Конкретні заходи щодо будівництва нових об'єктів переробки відходів чи реконструкції існуючих</li>
+                <li><span class="oc-arrow">→</span>План закриття та рекультивації звалищ, що не відповідають нормативним вимогам</li>
+                <li><span class="oc-arrow">→</span>Заходи з попередження несанкціонованого захаращення та засмічення території громади</li>
+            </ul>
+        </div>
+        <div>
+            <div class="approval-panel">
+                <div class="eyebrow">✦ Ланцюг затвердження</div>
+                <p>Розроблений проєкт МПУВ подається до <strong>обласної державної адміністрації</strong> для схвалення перед остаточним затвердженням радою громади.</p>
+                <ul class="approval-list">
+                    <li><span class="al-arrow">→</span> Розробляється за участю науковців, громадських експертів та місцевих підприємств</li>
+                    <li><span class="al-arrow">→</span> Обов'язковий для <strong>усіх територіальних громад</strong> в Україні без винятку</li>
+                    <li><span class="al-arrow">→</span> Документ схвалюється обласною державною адміністрацією перед затвердженням</li>
+                    <li><span class="al-arrow">→</span> Jureco веде весь процес — від аналізу до схвалення</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- KEY FACTS / TIMELINES -->
+<section class="facts-block fade-up">
+    <div>
+        <div class="eyebrow">✦ Терміни та чинність</div>
+        <h2 class="section-title">Основні <span class="accent">терміни та<br>зобов'язання</span></h2>
+        <div class="rich facts-rich">
+            <p>МПУВ — це живий управлінський документ із визначеним терміном чинності, обов'язковими циклами перегляду та щорічними зобов'язаннями зі звітності, покладеними законом на кожну раду громади.</p>
+        </div>
+        <div class="facts-timeline">
+            <div class="fact-row">
+                <div class="fact-num">10</div>
+                <div class="fact-label">Років — термін чинності<br>плану</div>
+            </div>
+            <div class="fact-row">
+                <div class="fact-num">4</div>
+                <div class="fact-label">Роки максимум — обов'язковий<br>цикл перегляду з дати набрання чинності</div>
+            </div>
+            <div class="fact-row">
+                <div class="fact-num">6</div>
+                <div class="fact-label">Місяців — термін оновлення<br>після будь-якої зміни регіонального плану</div>
+            </div>
+            <div class="fact-row">
+                <div class="fact-num">1</div>
+                <div class="fact-label">Березня — термін щорічної звітності<br>з даними моніторингу до відповідних органів</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="eyebrow">✦ Щорічний моніторинг</div>
+        <h2 class="section-title">Поточні <span class="accent">зобов'язання<br>зі звітності</span></h2>
+        <div class="rich facts-rich">
+            <p>Щороку органи місцевого самоврядування зобов'язані звітувати про хід реалізації МПУВ — зокрема про досягнення <strong>локалізованих цільових показників</strong>, визначених у плані.</p>
+            <p>Дані моніторингу подаються відповідним державним органам до <strong>1 березня наступного періоду</strong> та одночасно публікуються на офіційному сайті громади для публічного доступу.</p>
+        </div>
+        <div class="info-card">
+            <div class="ic-dot"></div>
+            <p>Невиконання обов'язку щодо розроблення, схвалення чи підтримання МПУВ є порушенням Закону України «Про управління відходами» та наражає керівництво громади на адміністративну відповідальність. Jureco забезпечує <strong>повний цикл супроводу та щорічний моніторинг</strong> протягом усього 10-річного терміну дії плану.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SIX PILLARS -->
+<section class="principles-block fade-up">
+    <div class="center-head">
+        <span class="tag-mono tag-mono-center">✦ Архітектура плану</span>
+        <h2 class="section-title">Шість <span class="accent">складових МПУВ</span></h2>
+        <p>Кожен місцевий план управління відходами структурується навколо цих базових аналітичних та операційних блоків — кожен ґрунтується на перевірених місцевих даних.</p>
+    </div>
+    <div class="principles-grid">
+        <div class="principle-card">
+            <div class="principle-num">Блок 01</div>
+            <h3>Оцінка поточного стану</h3>
+            <p>Інвентаризація всіх потоків відходів на території громади — види, обсяги, джерела — та характеристика всіх наявних об'єктів видалення, перевантажувальних станцій та інфраструктури збору.</p>
+        </div>
+        <div class="principle-card">
+            <div class="principle-num">Блок 02</div>
+            <h3>Аналіз спроможності операторів</h3>
+            <p>Оцінка всіх підприємств з управління відходами, що працюють на території: обсяг послуг, технічне обладнання, потужність переробки, географічне покриття та регуляторний статус.</p>
+        </div>
+        <div class="principle-card">
+            <div class="principle-num">Блок 03</div>
+            <h3>Аналіз інфраструктурних розривів та інвестиційний план</h3>
+            <p>Визначення відсутньої чи недостатньої інфраструктури — лінії сортування, об'єкти компостування, пункти збору — з оцінкою витрат, моделями фінансування та визначенням пріоритетів.</p>
+        </div>
+        <div class="principle-card">
+            <div class="principle-num">Блок 04</div>
+            <h3>Програма розвитку нових об'єктів</h3>
+            <p>Конкретні заходи щодо будівництва нових об'єктів переробки відходів чи реконструкції наявних, включно з критеріями вибору майданчиків, шляхами отримання дозволів та графіками реалізації.</p>
+        </div>
+        <div class="principle-card">
+            <div class="principle-num">Блок 05</div>
+            <h3>Закриття та рекультивація звалищ</h3>
+            <p>Виявлення всіх несанкціонованих звалищ на території та поетапний план закриття, технічної рекультивації та моніторингу після закриття відповідно до національних та європейських стандартів.</p>
+        </div>
+        <div class="principle-card">
+            <div class="principle-num">Блок 06</div>
+            <h3>Запобігання несанкціонованому захарасчуванню</h3>
+            <p>Системні заходи щодо запобігання несанкціонованому видаленню відходів: інфраструктура моніторингу, протоколи реагування, програми підвищення обізнаності та механізми звернень громади.</p>
+        </div>
+    </div>
+</section>
+
+<!-- QUOTE STRIP -->
+<div class="lwmp-quote-strip fade-up">
+    <blockquote>«Стале управління відходами не починається біля воріт звалища. Воно починається з плану — такого, що визначає кожен потік відходів, кожен розрив в інфраструктурі та кожен шлях фінансування ще до того, як вирушить перша вантажівка.»</blockquote>
+    <span class="sq-label">Jureco<br>Consulting</span>
+</div>
+
+<!-- HOW JURECO HELPS -->
+<section class="help-block lwmp-help fade-up">
+    <div>
+        <div class="eyebrow">✦ Наша роль</div>
+        <h2 class="section-title">Як Jureco <span class="accent">розробляє<br>ваш МПУВ</span></h2>
+        <ul class="help-list">
+            <li>
+                <span class="help-arrow">→</span>
+                <div>
+                    <strong>Польовий аудит потоків відходів</strong>
+                    <p>Інвентаризація на місці видів, обсягів відходів та наявної інфраструктури збору й видалення — включно з морфологічними дослідженнями складу, де це потрібно — для встановлення перевіреної базової лінії плану.</p>
+                </div>
+            </li>
+            <li>
+                <span class="help-arrow">→</span>
+                <div>
+                    <strong>Повне авторство документа МПУВ</strong>
+                    <p>Підготовка повного документа плану відповідно до Постанови КМУ № 947/2023 та наказу Мінекоенерго № 288/2024 — охоплюючи всі шість структурних блоків з перевіреними місцевими даними, цільовими показниками та графіками реалізації.</p>
+                </div>
+            </li>
+            <li>
+                <span class="help-arrow">→</span>
+                <div>
+                    <strong>Організація експертних та громадських консультацій</strong>
+                    <p>Організація та документування консультацій з науковцями, галузевими експертами, місцевими підприємствами та громадськістю — відповідно до вимог закону протягом усього процесу розробки.</p>
+                </div>
+            </li>
+            <li>
+                <span class="help-arrow">→</span>
+                <div>
+                    <strong>Підтримка отримання схвалення обласної адміністрації</strong>
+                    <p>Підготовка та подання проєкту МПУВ до обласної державної адміністрації для обов'язкового схвалення — з повною координацією відповідей на зауваження та будь-яких необхідних правок.</p>
+                </div>
+            </li>
+            <li>
+                <span class="help-arrow">→</span>
+                <div>
+                    <strong>Щорічний моніторинг та звітність</strong>
+                    <p>Постійний моніторинг досягнення цільових показників після затвердження, підготовка щорічних звітів для подання державним органам до 1 березня та публікація результатів на офіційному сайті громади.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="help-visual">
+        <img class="help-img-main" src="https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=700&q=80" alt="Команда екологічних консультантів — планування управління відходами">
+        <div class="help-badge-float">
+            <div class="hbf-label">Підхід</div>
+            <div class="hbf-val">Практичний</div>
+        </div>
+    </div>
+</section>
+
+<!-- MONITORING OBLIGATIONS -->
+<section class="monitoring-block fade-up">
+    <div>
+        <div class="eyebrow">✦ Управління після затвердження</div>
+        <h2 class="section-title">Поточні <span class="accent">зобов'язання<br>громади</span></h2>
+        <div class="rich">
+            <p>Затвердження МПУВ не завершує юридичні зобов'язання громади — воно започатковує <strong>10-річний цикл реалізації, моніторингу та періодичного перегляду</strong>, передбачений законом.</p>
+            <p>Органи місцевого самоврядування повинні відстежувати досягнення локалізованих цільових показників плану та звітувати щороку відповідним державним органам. Результати мають публікуватись на офіційному сайті громади не пізніше <strong>1 березня наступного року</strong>.</p>
+            <p>У разі зміни регіонального плану МПУВ має бути <strong>оновлений протягом шести місяців</strong>. Якщо моніторинг виявляє суттєві розриви в реалізації чи зміну місцевих умов, часткова ревізія може бути розпочата в будь-який час.</p>
+            <p>Jureco забезпечує повний цикл підтримки протягом усього строку дії плану — щоб керівництво громади могло виконувати всі зобов'язання без створення внутрішньої спеціалізованої спроможності.</p>
+        </div>
+    </div>
+    <div>
+        <div class="img-frame-wide">
+            <img src="https://images.unsplash.com/photo-1604187351574-c75ca79f5807?auto=format&fit=crop&w=800&q=80" alt="Моніторинг та звітність з управління відходами">
+        </div>
+        <div class="monitoring-infobox">
+            <div class="eyebrow">✦ Обов'язково для всіх громад</div>
+            <p>МПУВ не є опціональним. Кожна територіальна громада в Україні зобов'язана за законом розробити, схвалити, затвердити, реалізувати та щорічно звітувати про місцевий план управління відходами. Невідповідність наражає обраних посадовців на адміністративну відповідальність відповідно до українського законодавства.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-block fade-up">
+    <div class="center-head">
+        <span class="tag-mono tag-mono-center">✦ База знань</span>
+        <h2 class="section-title">Поширені запитання про <span class="accent">процедуру МПУВ</span></h2>
+    </div>
+    <div class="acc-wrap">
+        <div class="acc-item">
+            <button class="acc-btn">
+                <span>Чи є МПУВ обов'язковим для всіх територіальних громад, чи лише для великих міст?</span>
+                <span class="acc-ico">+</span>
+            </button>
+            <div class="acc-panel">
+                <p>МПУВ є обов'язковим для всіх територіальних громад в Україні без винятку — незалежно від чисельності населення, міського чи сільського характеру, чи економічного профілю. Стаття 26, частина 2, пункт 1 Закону України «Про управління відходами» створює пряме юридичне зобов'язання для кожної громади розробити та підтримувати цей план.</p>
+            </div>
+        </div>
+        <div class="acc-item">
+            <button class="acc-btn">
+                <span>Коли громада повинна розробити свій МПУВ?</span>
+                <span class="acc-ico">+</span>
+            </button>
+            <div class="acc-panel">
+                <p>МПУВ має бути розроблений протягом одного року з моменту набрання чинності відповідним регіональним планом управління відходами. Оскільки регіональні плани поступово затверджуються в різних областях, громадам слід уточнити статус свого конкретного регіонального плану, щоб обчислити власний термін. Jureco може визначити точний термін зобов'язання вашої громади під час безкоштовної первинної консультації.</p>
+            </div>
+        </div>
+        <div class="acc-item">
+            <button class="acc-btn">
+                <span>Хто формально затверджує МПУВ і який процес схвалення?</span>
+                <span class="acc-ico">+</span>
+            </button>
+            <div class="acc-panel">
+                <p>Проєкт МПУВ спочатку схвалюється обласною державною адміністрацією, потім формально затверджується відповідною радою громади. Перед поданням на схвалення документ має бути розроблений за участю науковців, експертів, громадськості та місцевих підприємств. Jureco веде весь процес — від початкового збору даних до схвалення обласною адміністрацією та прийняття радою.</p>
+            </div>
+        </div>
+        <div class="acc-item">
+            <button class="acc-btn">
+                <span>Як МПУВ пов'язаний з регіональними та національними планами управління відходами?</span>
+                <span class="acc-ico">+</span>
+            </button>
+            <div class="acc-panel">
+                <p>МПУВ є третім з чотирьох рівнів в ієрархії управління відходами в Україні. Він має бути узгодженим і підпорядкованим Регіональному плану управління відходами, який, у свою чергу, реалізує Національну стратегію управління відходами. МПУВ перетворює цілі регіонального рівня на конкретні, специфічні для громади заходи, інфраструктурні цілі та локалізовані показники. Будь-яка зміна регіонального плану запускає обов'язкове оновлення МПУВ протягом шести місяців.</p>
+            </div>
+        </div>
+        <div class="acc-item">
+            <button class="acc-btn">
+                <span>Що відбувається, якщо громада не розробляє чи не підтримує свій МПУВ?</span>
+                <span class="acc-ico">+</span>
+            </button>
+            <div class="acc-panel">
+                <p>Невиконання обов'язку розробити МПУВ у встановлений законом термін, неподання щорічних звітів з моніторингу до 1 березня чи невиконання оновлення плану після зміни регіонального плану є порушеннями Закону України «Про управління відходами». Посадовці громади, відповідальні за ці зобов'язання, можуть зазнати адміністративної відповідальності. Крім того, громади, що не виконують вимоги, ризикують втратити доступ до державних та міжнародних програм фінансування, пов'язаних з розвитком інфраструктури управління відходами. Jureco рекомендує розпочинати розробку МПУВ якнайшвидше, щоб уникнути розриву у відповідності.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FORM -->
+<!-- CTA FORM -->
+<section id="contact" class="audit">
+    <div class="audit-grid">
+        <div class="audit-copy">
+            <span class="eyebrow r-up">Аудит вашого випадку</span>
+            <h2 class="r-up">Забезпечте відповідність нормам для свого підприємства</h2>
+            <p class="audit-lead r-up">Зв'яжіться з нашим інженерним відділом, щоб отримати негайний діагностичний аналіз ваших структурних вимог відповідно до чинного екологічного законодавства.</p>
+        </div>
+
+        <form id="cta-audit-form" class="audit-form r-up" action="https://formspree.io/f/mqevwaqk" method="POST">
+            <div class="field">
+                <label for="f-company">Назва компанії</label>
+                <input id="f-company" type="text" name="company" autocomplete="organization" required>
+            </div>
+            <div class="field">
+                <label for="f-email">Робоча електронна пошта</label>
+                <input id="f-email" type="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+                <label for="f-phone">Контактний телефон</label>
+                <input id="f-phone" type="tel" name="phone" autocomplete="tel" required>
+            </div>
+            <div class="field">
+                <label for="f-message">Що вам потрібно?</label>
+                <textarea id="f-message" name="message" rows="3" required></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="Нова заявка — JURECO (МПУВ)">
+            <button type="submit" class="btn-main btn-submit"><span class="lbl">Замовити регуляторний аудит</span></button>
+            <p class="form-status" aria-live="polite"></p>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+    <div class="foot-word" aria-hidden="true">Jureco</div>
+    <div class="foot-row">
+        <span>&#169; 2026 Jureco Consulting</span>
+        <a href="mailto:info@jureco.com">info@jureco.com</a>
+        <a href="#top">Повернутися наверх &#8593;</a>
+    </div>
+</footer>
+
+<script src="home.js"></script>
+<script src="inner.js"></script>
+<script src="form-handler.js"></script>
+</body>
+</html>

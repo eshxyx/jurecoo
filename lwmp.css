@@ -1,0 +1,409 @@
+/* =========================================================
+   LWMP — LOCAL WASTE MANAGEMENT PLAN
+   Page-specific styles for lwmp.html
+   Extends the shared style.css design system
+   ========================================================= */
+
+/* ── HERO ── */
+.lwmp-hero {
+    padding: 64px 52px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 72px;
+    align-items: center;
+    min-height: 460px;
+    background: var(--stone);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+.lwmp-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 80% 50%, rgba(74,122,92,0.07) 0%, transparent 65%);
+    pointer-events: none;
+}
+
+/* ── WHO DEVELOPS BLOCK ── */
+.who-dev-block {
+    padding: 88px 52px;
+    background: var(--white);
+    position: relative;
+    z-index: 1;
+}
+.who-dev-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 52px;
+}
+
+/* ── APPROVAL CHAIN PANEL (inside .who-dev-block) ── */
+.approval-panel {
+    background: var(--stone);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--sage);
+    padding: 32px;
+}
+.approval-panel .eyebrow {
+    margin-bottom: 18px;
+}
+.approval-panel > p {
+    color: var(--ink2);
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
+.approval-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.approval-list li {
+    display: flex;
+    gap: 12px;
+    font-size: 0.86rem;
+    color: var(--ink2);
+}
+.approval-list li .al-arrow {
+    color: var(--sage);
+    font-family: var(--font-mono);
+    flex-shrink: 0;
+}
+
+/* ── PRINCIPLES GRID ── */
+.principles-block {
+    padding: 88px 52px;
+    background: var(--stone);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 1;
+}
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 52px;
+}
+.principle-card {
+    border: 1px solid var(--border);
+    padding: 32px 26px;
+    border-radius: 3px;
+    background: var(--white);
+    transition: border-color 0.25s, transform 0.25s;
+    position: relative;
+    overflow: hidden;
+}
+.principle-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--sage);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+.principle-card:hover {
+    border-color: var(--sage-lt);
+    transform: translateY(-3px);
+}
+.principle-card:hover::after {
+    transform: scaleX(1);
+}
+.principle-num {
+    font-family: var(--font-mono);
+    font-size: 0.67rem;
+    font-weight: 600;
+    color: var(--sage);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 14px;
+}
+.principle-card h3 {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--ink);
+}
+.principle-card p {
+    font-size: 0.85rem;
+    color: var(--ink2);
+    line-height: 1.6;
+}
+
+/* ── KEY FACTS / TIMELINES ── */
+.facts-block {
+    padding: 88px 52px;
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+}
+.facts-timeline {
+    margin-top: 28px;
+}
+.fact-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+}
+.fact-row:first-child {
+    border-top: 1px solid var(--border);
+}
+.fact-num {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    color: var(--sage);
+    line-height: 1;
+    min-width: 70px;
+    text-align: right;
+}
+.fact-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--ink2);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    line-height: 1.5;
+}
+.facts-rich {
+    margin-top: 20px;
+}
+
+/* ── OBLIGATIONS LIST ── */
+.oblig-check-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.oblig-check-list li {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.89rem;
+    color: var(--ink2);
+    line-height: 1.55;
+}
+.oblig-check-list li:first-child {
+    border-top: 1px solid var(--border);
+}
+.oc-arrow {
+    font-family: var(--font-mono);
+    color: var(--sage);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* ── QUOTE STRIP ── */
+.lwmp-quote-strip {
+    background: var(--sage);
+    padding: 48px 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+.lwmp-quote-strip blockquote {
+    font-family: var(--font-serif);
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: var(--white);
+    font-style: italic;
+    line-height: 1.55;
+    max-width: 680px;
+    opacity: 0.92;
+}
+.lwmp-quote-strip .sq-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--sage-dim);
+    white-space: nowrap;
+}
+
+/* ── MONITORING BLOCK ── */
+.monitoring-block {
+    padding: 88px 52px;
+    background: var(--stone);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.monitoring-infobox {
+    border: 1px solid var(--border);
+    padding: 24px;
+    background: var(--white);
+}
+.monitoring-infobox p {
+    color: var(--ink2);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+/* ── HELP BLOCK (page-level padding override) ── */
+.lwmp-help {
+    padding-top: 88px;
+}
+
+/* ── FOUR-TIER PLANNING HIERARCHY ── */
+.levels-block {
+    padding: 88px 52px;
+    background: var(--white);
+    position: relative;
+    z-index: 1;
+}
+.levels-chain {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 44px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.level-item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 22px 28px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    transition: border-color 0.25s, background 0.25s;
+    position: relative;
+}
+.level-item + .level-item {
+    border-top: none;
+}
+.level-item:hover {
+    border-color: var(--sage-lt);
+    background: var(--stone);
+}
+.level-item.active-level {
+    background: var(--sage-dim);
+    border-color: var(--sage-lt);
+    border-left: 3px solid var(--sage);
+}
+.level-num {
+    font-family: var(--font-serif);
+    font-size: 2.4rem;
+    color: var(--sage);
+    line-height: 1;
+    min-width: 48px;
+    text-align: center;
+}
+.level-text h3 {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+}
+.level-text p {
+    font-size: 0.82rem;
+    color: var(--ink2);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+.level-here-tag {
+    font-style: normal;
+    color: var(--sage);
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+}
+.level-arrow {
+    margin-left: auto;
+    color: var(--sage-lt);
+    font-size: 1.2rem;
+}
+.levels-footnote {
+    text-align: center;
+    color: var(--ink3);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    margin-top: 28px;
+    letter-spacing: 0.06em;
+}
+
+/* ── TAG MONO CENTERED (used in section headers) ── */
+.tag-mono-center {
+    display: inline-block;
+    border: 1px solid var(--border);
+    color: var(--sage);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 5px 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0 auto 18px;
+}
+
+/* ── IMG FRAME WIDE ── */
+.img-frame-wide {
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin-bottom: 24px;
+}
+.img-frame-wide img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    filter: brightness(0.82) saturate(0.8);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1000px) {
+    .lwmp-hero,
+    .who-dev-grid,
+    .facts-block,
+    .monitoring-block {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .lwmp-hero {
+        padding: 48px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+    .principles-block,
+    .who-dev-block,
+    .facts-block,
+    .monitoring-block,
+    .levels-block {
+        padding: 52px 24px;
+    }
+    .lwmp-quote-strip {
+        flex-direction: column;
+        padding: 40px 24px;
+        gap: 20px;
+    }
+}
