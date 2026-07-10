@@ -84,27 +84,29 @@ a { color: inherit; text-decoration: none; }
 
 /* ── reveal system (each variant used by a different section) */
 
-.r-up { opacity: 0; transform: translateY(36px); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); }
+/* Hidden-by-default states are gated on html.js (set by JS itself),
+   so if JavaScript fails to run, all content stays visible. */
+:where(html.js) .r-up { opacity: 0; transform: translateY(36px); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); }
 .r-up.in { opacity: 1; transform: none; }
 
-.r-fade { opacity: 0; transition: opacity 1.1s ease; }
+:where(html.js) .r-fade { opacity: 0; transition: opacity 1.1s ease; }
 .r-fade.in { opacity: 1; }
 
-.r-clip { clip-path: inset(0 100% 0 0); transition: clip-path 1.1s var(--ease-out); }
+:where(html.js) .r-clip { clip-path: inset(0 100% 0 0); transition: clip-path 1.1s var(--ease-out); }
 .r-clip.in { clip-path: inset(0 0 0 0); }
 
-.r-clip-alt { clip-path: inset(0 0 0 100%); transition: clip-path 1.1s var(--ease-out); }
+:where(html.js) .r-clip-alt { clip-path: inset(0 0 0 100%); transition: clip-path 1.1s var(--ease-out); }
 .r-clip-alt.in { clip-path: inset(0 0 0 0); }
 
-.r-clip-up { clip-path: inset(100% 0 0 0); transition: clip-path 1s var(--ease-out); }
+:where(html.js) .r-clip-up { clip-path: inset(100% 0 0 0); transition: clip-path 1s var(--ease-out); }
 .r-clip-up.in { clip-path: inset(0 0 0 0); }
 
-.r-line { transform: scaleX(0); transform-origin: left; transition: transform 1.2s var(--ease-out); }
+:where(html.js) .r-line { transform: scaleX(0); transform-origin: left; transition: transform 1.2s var(--ease-out); }
 .r-line.in { transform: scaleX(1); }
 
 /* word-mask reveal for hero headline */
 .w-mask { display: inline-block; overflow: hidden; vertical-align: bottom; }
-.w-mask > span {
+:where(html.js) .w-mask > span {
     display: inline-block;
     transform: translateY(110%);
     transition: transform 1s var(--ease-out);
@@ -742,11 +744,12 @@ body.loaded .w-mask > span { transform: translateY(0); }
     display: block;
     overflow: hidden;
 }
-.quote-inner .q-line > span {
+:where(html.js) .quote-inner .q-line > span {
     display: block;
     transform: translateY(105%);
     transition: transform 1s var(--ease-out);
 }
+.quote-inner .q-line > span { display: block; }
 .quote-inner.in .q-line > span { transform: none; }
 .quote-inner .q-line:nth-child(2) > span { transition-delay: 0.14s; }
 .quote-inner .q-line:nth-child(3) > span { transition-delay: 0.28s; }

@@ -2,8 +2,33 @@
 (function () {
     'use strict';
 
+    /* Animations hide content by default only when this class is present,
+       so a JS failure can never leave the page blank. */
+    document.documentElement.classList.add('js');
+
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var fine = window.matchMedia('(pointer: fine)').matches;
+
+    /* Failsafe watchdog: if a reveal element sits inside the viewport but
+       never received .in (broken/silent observer, exotic browser), unstick
+       it. Below-fold elements keep their normal scroll-triggered reveals. */
+    var REVEAL_SEL = '.r-up, .r-fade, .r-clip, .r-clip-alt, .r-clip-up, .r-line, ' +
+        '.quote-inner, .fade-up, .g-item, .li-item, .tl-row, .proc-row, ' +
+        '.level-item, .matrix-block, .sea-quote-strip, .lwmp-quote-strip, ' +
+        '.mep-quote-strip, .cds-quote-strip, .intro-strip';
+    setTimeout(function () {
+        document.body.classList.add('loaded');
+        setInterval(function () {
+            var vh = window.innerHeight;
+            document.querySelectorAll(REVEAL_SEL).forEach(function (el) {
+                if (el.classList.contains('in')) return;
+                var r = el.getBoundingClientRect();
+                if (r.top < vh && r.bottom > 0 && (r.width || r.height)) {
+                    el.classList.add('in');
+                }
+            });
+        }, 1500);
+    }, 2500);
 
     /* ── hero load choreography ─────────────────────────────── */
     window.addEventListener('load', function () {
