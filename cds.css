@@ -260,7 +260,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1763830932225-bde7fdac7919?auto=format&fit=crop&w=1400&q=80');
+    background-image: url('photos/u1763830932225.jpg');
     background-size: cover;
     background-position: center;
     filter: brightness(0.35) saturate(0.5);
