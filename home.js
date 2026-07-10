@@ -147,37 +147,6 @@
         parallax();
     }
 
-    /* ── services: cursor-follow image preview (desktop) ────── */
-    var peek = document.querySelector('.svc-peek');
-    if (peek && fine && !reduced) {
-        var imgs = peek.querySelectorAll('img');
-        var px = 0, py = 0, cx = 0, cy = 0, raf = null;
-
-        function loop() {
-            cx += (px - cx) * 0.12;
-            cy += (py - cy) * 0.12;
-            peek.style.transform = 'translate(' + (cx - 90) + 'px,' + (cy - 115) + 'px) scale(1)';
-            raf = requestAnimationFrame(loop);
-        }
-
-        var list = document.querySelector('.svc-list');
-        list.addEventListener('mousemove', function (e) {
-            px = e.clientX; py = e.clientY;
-        });
-        document.querySelectorAll('.svc-row').forEach(function (row) {
-            row.addEventListener('mouseenter', function () {
-                var key = row.getAttribute('data-peek');
-                imgs.forEach(function (im) { im.classList.toggle('show', im.dataset.key === key); });
-                peek.classList.add('on');
-                if (!raf) { cx = px; cy = py; loop(); }
-            });
-        });
-        list.addEventListener('mouseleave', function () {
-            peek.classList.remove('on');
-            if (raf) { cancelAnimationFrame(raf); raf = null; }
-        });
-    }
-
     /* ── magnetic primary buttons (desktop) ─────────────────── */
     if (fine && !reduced) {
         document.querySelectorAll('.btn-main').forEach(function (btn) {

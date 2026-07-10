@@ -464,9 +464,15 @@ body.loaded .w-mask > span { transform: translateY(0); }
     padding: clamp(20px, 3.4vh, 34px) 4px;
     border-bottom: 1px solid var(--line);
     position: relative;
-    transition: padding-left 0.4s var(--ease-out), background 0.4s ease;
+    overflow: hidden;
+    transition: padding 0.5s var(--ease-out), background 0.5s ease;
 }
-.svc-row:hover { padding-left: 26px; background: rgba(236, 231, 218, 0.5); }
+.svc-row:hover {
+    padding-left: 26px;
+    padding-top: clamp(64px, 11vh, 96px);
+    padding-bottom: clamp(64px, 11vh, 96px);
+    background: rgba(236, 231, 218, 0.5);
+}
 
 .svc-row .idx {
     font-family: var(--font-mono);
@@ -492,30 +498,36 @@ body.loaded .w-mask > span { transform: translateY(0); }
 }
 .svc-row:hover .go { transform: translate(6px, -6px) rotate(45deg); color: var(--clay); }
 
-/* floating cursor preview (desktop only, driven by JS) */
-.svc-peek {
-    position: fixed;
-    top: 0; left: 0;
-    width: 180px;
-    height: 230px;
-    border-radius: 14px;
-    pointer-events: none;
-    z-index: 60;
+/* embedded row preview — clipped by the row itself, revealed on hover */
+.row-fig {
+    position: absolute;
+    top: 50%;
+    right: clamp(60px, 14vw, 240px);
+    width: clamp(160px, 18vw, 250px);
+    aspect-ratio: 4 / 3;
     overflow: hidden;
+    pointer-events: none;
     opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out);
-    will-change: transform;
+    transform: translate(46px, -50%);
+    clip-path: inset(0 0 0 100%);
+    transition:
+        opacity 0.5s var(--ease-out),
+        transform 0.55s var(--ease-out),
+        clip-path 0.55s var(--ease-out);
 }
-.svc-peek.on { opacity: 1; transform: scale(1); }
-.svc-peek img {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
+.svc-row:hover .row-fig {
+    opacity: 1;
+    transform: translate(0, -50%);
+    clip-path: inset(0 0 0 0);
+}
+.row-fig img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.35s ease;
+    transform: scale(1.18);
+    transition: transform 0.65s var(--ease-out);
 }
-.svc-peek img.show { opacity: 1; }
+.svc-row:hover .row-fig img { transform: scale(1); }
 
 /* ============================================================
    ABOUT — overlapping asymmetric split
@@ -1131,7 +1143,8 @@ body.loaded .w-mask > span { transform: translateY(0); }
     .voices-grid { grid-template-columns: 1fr; }
     .audit-grid { grid-template-columns: 1fr; }
     .news-inner { grid-template-columns: 1fr; }
-    .svc-peek { display: none; }
+    .row-fig { display: none; }
+    .svc-row:hover { padding-top: clamp(20px, 3.4vh, 34px); padding-bottom: clamp(20px, 3.4vh, 34px); }
 }
 
 @media (max-width: 760px) {
@@ -1214,6 +1227,5 @@ body.loaded .w-mask > span { transform: translateY(0); }
     .r-up, .r-fade, .r-clip, .r-clip-alt, .r-clip-up, .r-line { opacity: 1; transform: none; clip-path: none; }
     .w-mask > span { transform: none; }
     .quote-inner .q-line > span { transform: none; }
-    .svc-peek { display: none; }
     .news-track { animation: none; }
 }
