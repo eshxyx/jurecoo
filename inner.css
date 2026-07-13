@@ -21,6 +21,21 @@
 /* page rhythm */
 body { padding-top: 76px; }
 
+/* ── LAW LINKS (zakon.rada.gov.ua / EUR-Lex citations) ──── */
+.law-a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--clay);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+.law-a:hover { color: var(--clay); }
+.approval-panel .law-a:hover, .intro-strip .law-a:hover,
+.who-block .law-a:hover, .risk-panel .law-a:hover { color: #E8A583; }
+a.pill { cursor: pointer; transition: opacity 0.2s ease; }
+a.pill:hover { opacity: 0.82; }
+
 /* ── BREADCRUMB ─────────────────────────────────────────── */
 .breadcrumb-bar, .bc-bar {
     padding: 22px var(--gutter) 0;
