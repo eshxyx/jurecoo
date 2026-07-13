@@ -9,7 +9,7 @@
     var codes = {
         'eia.html': 'ОВД', 'lap.html': 'ІЕД', 'sea.html': 'СЕО',
         'lwmp.html': 'МПУВ', 'mep.html': 'МЕП', 'cds.html': 'СРГ',
-        'about.html': 'Jureco'
+        'about.html': 'Jureco Consulting'
     };
     var page = (location.pathname.split('/').pop() || '').toLowerCase();
     var hero = document.querySelector('.eia-hero, .iep-hero, .sea-hero, .lwmp-hero, .mep-hero, .cds-hero');
@@ -18,6 +18,7 @@
         ghost.className = 'page-ghost';
         ghost.setAttribute('aria-hidden', 'true');
         ghost.textContent = codes[page];
+        if (codes[page].length > 6) ghost.style.fontSize = 'clamp(2.4rem, 6.5vw, 6.5rem)';
         hero.appendChild(ghost);
     }
 

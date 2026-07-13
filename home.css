@@ -266,7 +266,7 @@ body.loaded .w-mask > span { transform: translateY(0); }
     top: 12vh;
     right: -2vw;
     font-family: var(--font-display);
-    font-size: clamp(8rem, 22vw, 22rem);
+    font-size: clamp(3.4rem, 9.6vw, 10rem);
     line-height: 1;
     color: transparent;
     -webkit-text-stroke: 1px rgba(17, 28, 20, 0.10);
@@ -1105,7 +1105,8 @@ body.loaded .w-mask > span { transform: translateY(0); }
 }
 .foot-word {
     font-family: var(--font-display);
-    font-size: clamp(4rem, 16vw, 15rem);
+    font-size: clamp(2.2rem, 8.4vw, 8.5rem);
+    white-space: nowrap;
     line-height: 0.9;
     text-align: center;
     color: transparent;
@@ -1142,7 +1143,7 @@ body.loaded .w-mask > span { transform: translateY(0); }
     .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 120px; }
     .hero-fig { min-height: 46vh; }
     .hero-side { display: none; }
-    .hero-ghost { font-size: 30vw; top: 6vh; }
+    .hero-ghost { font-size: 12vw; top: 6vh; }
     .who { grid-template-columns: 1fr; }
     .who-fig { margin-top: 0; max-width: 560px; }
     .who-stamp { right: -20px; top: -34px; width: 104px; height: 104px; }
