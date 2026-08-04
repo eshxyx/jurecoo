@@ -736,10 +736,14 @@ body.loaded .w-mask > span { transform: translateY(0); }
 .quote-bg {
     position: absolute;
     inset: -18% 0;
+    background-image: url('photos/u1448375240586-800.jpg');
     background-size: cover;
     background-position: center;
     opacity: 0.16;
     will-change: transform;
+}
+@media (min-width: 1025px) {
+    .quote-bg { background-image: url('photos/u1448375240586.jpg'); }
 }
 .quote-inner { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; text-align: center; }
 

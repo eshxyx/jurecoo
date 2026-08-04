@@ -96,7 +96,7 @@
                 io.unobserve(en.target);
             }
         });
-    }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.04, rootMargin: '0px 0px 12% 0px' });
     document.querySelectorAll('.r-up, .r-fade, .r-clip, .r-clip-alt, .r-clip-up, .r-line, .quote-inner, .fade-up').forEach(function (el) {
         io.observe(el);
     });
