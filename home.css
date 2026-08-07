@@ -1147,14 +1147,7 @@ body.loaded .w-mask > span { transform: translateY(0); }
     .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 120px; }
     .hero-fig { min-height: 46vh; }
     .hero-side { display: none; }
-    /* sits behind the headline: clear of the fixed header and the
-       kicker line, and fully inside the viewport width */
-    .hero-ghost {
-        font-size: 10.5vw;
-        top: 178px;
-        left: var(--gutter);
-        right: auto;
-    }
+    .hero-ghost { font-size: 12vw; top: 6vh; }
     .who { grid-template-columns: 1fr; }
     .who-fig { margin-top: 0; max-width: 560px; }
     .who-stamp { right: -20px; top: -34px; width: 104px; height: 104px; }
