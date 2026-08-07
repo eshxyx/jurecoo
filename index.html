@@ -4,30 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jureco Consulting — Еко-консалтинг та стратегічні послуги</title>
-    <meta name="description" content="Jureco Consulting супроводжує підприємства на шляху до повної відповідності екологічним нормам, безпеки ресурсів та ефективного управління відходами.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script>document.documentElement.classList.add('js');</script>
-    <link rel="stylesheet" href="home-x.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 <body id="top">
-
-<!-- ═══ PRELOADER ═══ -->
-<div class="pre" aria-hidden="true">
-    <div class="pre-inner">
-        <div class="pre-mark">Jureco Consulting</div>
-        <div class="pre-meta">Еко-консалтинг · 2026</div>
-        <div class="pre-bar"><i></i></div>
-        <div class="pre-num">000</div>
-    </div>
-</div>
-<div class="pre-curtain" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-
-<!-- ═══ CURSOR + PROGRESS ═══ -->
-<div class="cur" aria-hidden="true"><span class="cur-lbl">Огляд</span></div>
-<div class="cur-dot" aria-hidden="true"></div>
-<div class="prog" aria-hidden="true"></div>
 
 <!-- ═══ HEADER ═══ -->
 <header class="hd">
@@ -96,7 +79,7 @@
     </button>
 </header>
 
-<!-- ═══ MOBILE MENU ═══ -->
+<!-- mobile menu -->
 <nav class="m-menu" aria-label="Мобільне меню">
     <span class="mm-ghost" aria-hidden="true">Jureco</span>
     <div class="mm-inner">
@@ -124,111 +107,91 @@
 
 <!-- ═══ HERO ═══ -->
 <section class="hero">
-    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-ghost" aria-hidden="true">Еко-консалтинг</div>
 
     <div class="hero-copy">
-        <div class="hero-kicker h-anim"><span class="dot">✦</span> Стале майбутнє <span class="dot">/</span> Екологічна відповідність</div>
+        <div class="hero-kicker"><span class="dot">✦</span> Стале майбутнє <span class="dot">/</span> Екологічна відповідність</div>
         <h1 aria-label="Jureco Consulting">
-            <span class="ln">Jureco</span>
-            <span class="ln it">Consulting</span>
+            <span class="w-mask"><span>Jureco</span></span><br>
+            <span class="w-mask" style="transition-delay:.12s"><span><em>Consulting</em></span></span>
         </h1>
         <div class="hero-under">
-            <p class="hero-sub h-anim">Jureco Consulting супроводжує підприємства на шляху до повної відповідності екологічним нормам, безпеки ресурсів та ефективного управління відходами.</p>
-            <div class="hero-actions">
-                <a href="eia.html" class="btn-main h-anim"><span class="lbl">Наші послуги</span></a>
-                <a href="#contact" class="btn-ghost h-anim"><span>Замовити аудит</span></a>
+            <div>
+                <p class="hero-sub">Jureco Consulting супроводжує підприємства на шляху до повної відповідності екологічним нормам, безпеки ресурсів та ефективного управління відходами.</p>
+                <div class="hero-actions">
+                    <a href="eia.html" class="btn-main"><span class="lbl">Наші послуги</span></a>
+                    <a href="#" class="btn-quiet">Дивитися огляд <span class="arr">→</span></a>
+                </div>
             </div>
         </div>
     </div>
 
-    <figure class="hero-fig">
-        <span class="hero-fig-in h-clip">
-            <img src="photos/u1501854140801.jpg" srcset="photos/u1501854140801-800.jpg 800w, photos/u1501854140801.jpg 1200w" sizes="(max-width: 1100px) 100vw, 42vw" alt="Зелений ландшафт з висоти пташиного польоту" width="1200" height="800" fetchpriority="high" decoding="async">
-        </span>
+    <figure class="hero-fig r-clip-up in">
+        <img src="photos/u1501854140801.jpg" srcset="photos/u1501854140801-800.jpg 800w, photos/u1501854140801.jpg 1200w" sizes="(max-width: 1024px) 100vw, 42vw" alt="Зелений ландшафт з висоти пташиного польоту" width="1200" height="800" fetchpriority="high" decoding="async">
         <figcaption class="fig-cap">Природа / Промисловість — баланс</figcaption>
-        <div class="hero-badge h-anim" aria-hidden="true">
-            <div class="k">2026</div>
-            <div class="v">Рік заснування</div>
-        </div>
     </figure>
 
-    <div class="hero-foot">
-        <div class="hero-scroll h-anim">Гортайте <span class="tail"></span></div>
-        <span class="h-anim">Jureco Consulting — 2026</span>
-    </div>
+    <span class="hero-side" aria-hidden="true">Jureco Consulting — 2026</span>
+    <div class="hero-scroll" aria-hidden="true">Гортайте <span class="tail"></span></div>
 </section>
 
-<!-- ═══ MANIFESTO MARQUEE ═══ -->
-<section class="mani" aria-hidden="true">
-    <div class="mani-track">
-        <span>Стале майбутнє</span><span class="sep">✦</span>
-        <span>Екологічна відповідність</span><span class="sep">✦</span>
-        <span>Безпека ресурсів</span><span class="sep">✦</span>
-        <span>Управління відходами</span><span class="sep">✦</span>
-        <span>Стале майбутнє</span><span class="sep">✦</span>
-        <span>Екологічна відповідність</span><span class="sep">✦</span>
-        <span>Безпека ресурсів</span><span class="sep">✦</span>
-        <span>Управління відходами</span><span class="sep">✦</span>
+<!-- ═══ SERVICES INDEX ═══ -->
+<section class="svc">
+    <div class="svc-head r-up">
+        <h2 class="serif-em">Напрямки <em>роботи</em></h2>
+        <span class="count">( 06 )</span>
     </div>
-</section>
 
-<!-- ═══ SERVICES — horizontal gallery ═══ -->
-<section class="hz" id="services">
-    <div class="hz-pin">
-        <div class="hz-head">
-            <h2 class="h-xl rv">Напрямки <em class="ac">роботи</em></h2>
-            <span class="count rv">( 06 ) — гортайте вбік</span>
-        </div>
-
-        <div class="hz-track">
-            <a href="lap.html" class="hz-card rv">
-                <span class="n">01</span>
-                <span class="fig"><img src="photos/u1466611653911-520.jpg" srcset="photos/u1466611653911-520.jpg 520w, photos/u1466611653911.jpg 1200w" sizes="(max-width: 860px) 92vw, 30vw" alt="Вітрові турбіни на тлі неба" loading="lazy" decoding="async"></span>
-                <h3>Охорона атмосферного повітря <span class="go" aria-hidden="true">↗</span></h3>
-            </a>
-            <a href="eia.html" class="hz-card rv">
-                <span class="n">02</span>
-                <span class="fig"><img src="photos/u1541888946425-520.jpg" srcset="photos/u1541888946425-520.jpg 520w, photos/u1541888946425.jpg 1200w" sizes="(max-width: 860px) 92vw, 30vw" alt="Інженери оглядають будівельний майданчик" loading="lazy" decoding="async"></span>
-                <h3>Проєктування та експертиза <span class="go" aria-hidden="true">↗</span></h3>
-            </a>
-            <a href="lap.html" class="hz-card rv">
-                <span class="n">03</span>
-                <span class="fig"><img src="photos/u1505118380757-520.jpg" srcset="photos/u1505118380757-520.jpg 520w, photos/u1505118380757.jpg 1200w" sizes="(max-width: 860px) 92vw, 30vw" alt="Берегова лінія з висоти" loading="lazy" decoding="async"></span>
-                <h3>Спеціальне водокористування <span class="go" aria-hidden="true">↗</span></h3>
-            </a>
-            <a href="lwmp.html" class="hz-card rv">
-                <span class="n">04</span>
-                <span class="fig"><img src="photos/u1611284446314-520.jpg" srcset="photos/u1611284446314-520.jpg 520w, photos/u1611284446314.jpg 1200w" sizes="(max-width: 860px) 92vw, 30vw" alt="Контейнери для роздільного збору відходів" loading="lazy" decoding="async"></span>
-                <h3>Утилізація відходів <span class="go" aria-hidden="true">↗</span></h3>
-            </a>
-            <a href="about.html" class="hz-card rv">
-                <span class="n">05</span>
-                <span class="fig"><img src="photos/u1531834685032-520.jpg" srcset="photos/u1531834685032-520.jpg 520w, photos/u1531834685032.jpg 1200w" sizes="(max-width: 860px) 92vw, 30vw" alt="Робітники у захисних касках на об'єкті" loading="lazy" decoding="async"></span>
-                <h3>Охорона праці <span class="go" aria-hidden="true">↗</span></h3>
-            </a>
-            <a href="about.html" class="hz-card rv">
-                <span class="n">06</span>
-                <span class="fig"><img src="photos/u1532187863486-520.jpg" srcset="photos/u1532187863486-520.jpg 520w, photos/u1532187863486.jpg 1200w" sizes="(max-width: 860px) 92vw, 30vw" alt="Лабораторний аналіз проб" loading="lazy" decoding="async"></span>
-                <h3>Лабораторія <span class="go" aria-hidden="true">↗</span></h3>
-            </a>
-        </div>
-
-        <div class="hz-rail" aria-hidden="true"><i></i></div>
+    <div class="svc-list">
+        <a href="lap.html" class="svc-row r-up">
+            <span class="idx">01</span>
+            <span class="name">Охорона атмосферного повітря</span>
+            <span class="row-fig" aria-hidden="true"><picture><source media="(min-width: 1025px)" srcset="photos/u1466611653911-520.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" loading="lazy" decoding="async"></picture></span>
+            <span class="go" aria-hidden="true">↗</span>
+        </a>
+        <a href="eia.html" class="svc-row r-up">
+            <span class="idx">02</span>
+            <span class="name">Проєктування та експертиза</span>
+            <span class="row-fig" aria-hidden="true"><picture><source media="(min-width: 1025px)" srcset="photos/u1541888946425-520.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" loading="lazy" decoding="async"></picture></span>
+            <span class="go" aria-hidden="true">↗</span>
+        </a>
+        <a href="lap.html" class="svc-row r-up">
+            <span class="idx">03</span>
+            <span class="name">Спеціальне водокористування</span>
+            <span class="row-fig" aria-hidden="true"><picture><source media="(min-width: 1025px)" srcset="photos/u1505118380757-520.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" loading="lazy" decoding="async"></picture></span>
+            <span class="go" aria-hidden="true">↗</span>
+        </a>
+        <a href="lwmp.html" class="svc-row r-up">
+            <span class="idx">04</span>
+            <span class="name">Утилізація відходів</span>
+            <span class="row-fig" aria-hidden="true"><picture><source media="(min-width: 1025px)" srcset="photos/u1611284446314-520.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" loading="lazy" decoding="async"></picture></span>
+            <span class="go" aria-hidden="true">↗</span>
+        </a>
+        <a href="about.html" class="svc-row r-up">
+            <span class="idx">05</span>
+            <span class="name">Охорона праці</span>
+            <span class="row-fig" aria-hidden="true"><picture><source media="(min-width: 1025px)" srcset="photos/u1531834685032-520.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" loading="lazy" decoding="async"></picture></span>
+            <span class="go" aria-hidden="true">↗</span>
+        </a>
+        <a href="about.html" class="svc-row r-up">
+            <span class="idx">06</span>
+            <span class="name">Лабораторія</span>
+            <span class="row-fig" aria-hidden="true"><picture><source media="(min-width: 1025px)" srcset="photos/u1532187863486-520.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" loading="lazy" decoding="async"></picture></span>
+            <span class="go" aria-hidden="true">↗</span>
+        </a>
     </div>
+
 </section>
 
 <!-- ═══ WHO WE ARE ═══ -->
 <section class="who">
-    <div class="who-media">
-        <div class="who-fig rv-clip">
-            <img src="photos/u1441974231531.jpg" srcset="photos/u1441974231531-800.jpg 800w, photos/u1441974231531.jpg 1200w" sizes="(max-width: 1100px) 92vw, 42vw" alt="Аудит промислового об'єкта — лісовий масив" width="1000" height="1250" loading="lazy" decoding="async">
-        </div>
-        <div class="who-fig2 rv-clip">
-            <img src="photos/u1541888946425-520.jpg" srcset="photos/u1541888946425-520.jpg 520w, photos/u1541888946425.jpg 1200w" sizes="(max-width: 1100px) 40vw, 20vw" alt="Інженерна команда на об'єкті" loading="lazy" decoding="async">
+    <div class="who-fig r-clip">
+        <div class="frame">
+            <img src="photos/u1441974231531.jpg" srcset="photos/u1441974231531-800.jpg 800w, photos/u1441974231531.jpg 1200w" sizes="(max-width: 1024px) 92vw, 46vw" alt="Аудит промислового об'єкта — лісовий масив" width="1000" height="1250" loading="lazy" decoding="async">
         </div>
         <div class="who-stamp" aria-hidden="true">
-            <svg viewBox="0 0 132 132">
-                <defs><path id="circ" d="M 66,66 m -49,0 a 49,49 0 1,1 98,0 a 49,49 0 1,1 -98,0"/></defs>
+            <svg viewBox="0 0 130 130">
+                <defs><path id="circ" d="M 65,65 m -48,0 a 48,48 0 1,1 96,0 a 48,48 0 1,1 -96,0"/></defs>
                 <text><textPath href="#circ">З 2026 року • Jureco Consulting • екологія •</textPath></text>
             </svg>
             <span class="core">✦</span>
@@ -236,94 +199,91 @@
     </div>
 
     <div class="who-copy">
-        <span class="eyebrow rv">Хто ми</span>
-        <h2 class="h-xl rv">Справжні інженери.<br><em class="ac">Справжня відповідність.</em></h2>
-        <p class="lead rv">Ми — команда сертифікованих екологічних інженерів та юридичних експертів, які працювали безпосередньо на виробничих об'єктах, очисних спорудах та в державних установах експертизи, перш ніж заснувати Jureco Consulting цього року.</p>
-        <p class="rv">Жодних шаблонів. Кожен дозвіл, кожен аудит, кожна стратегія утилізації відходів розробляється з нуля під реальні умови вашого об'єкта.</p>
-        <div class="who-meta rv">
+        <span class="eyebrow r-up">Хто ми</span>
+        <h2 class="r-up">Справжні інженери.<br><em>Справжня відповідність.</em></h2>
+        <p class="lead r-up">Ми — команда сертифікованих екологічних інженерів та юридичних експертів, які працювали безпосередньо на виробничих об'єктах, очисних спорудах та в державних установах експертизи, перш ніж заснувати Jureco Consulting цього року.</p>
+        <p class="r-up">Жодних шаблонів. Кожен дозвіл, кожен аудит, кожна стратегія утилізації відходів розробляється з нуля під реальні умови вашого об'єкта.</p>
+        <div class="who-meta r-up">
             <div class="cell"><div class="k">2026</div><div class="v">Рік заснування</div></div>
             <div class="cell"><div class="k">06</div><div class="v">Напрямків</div></div>
             <div class="cell"><div class="k">100%</div><div class="v">Індивідуальний підхід</div></div>
         </div>
-        <a href="about.html" class="u-link rv">Про команду <span class="arr">→</span></a>
+        <a href="about.html" class="btn-quiet r-up">Про команду <span class="arr">→</span></a>
     </div>
 </section>
 
-<!-- ═══ SOLUTIONS — stacked cards ═══ -->
-<section class="stack">
-    <div class="stack-head">
-        <span class="eyebrow rv">Індивідуальні аудити та програми</span>
-        <h2 class="h-xl rv">Стратегічні <em class="ac">еко-рішення</em></h2>
+<!-- ═══ STRATEGIC SOLUTIONS ═══ -->
+<section class="sol">
+    <div class="sol-head">
+        <span class="eyebrow r-up">Індивідуальні аудити та програми</span>
+        <h2 class="r-up">Стратегічні <em>еко-рішення</em></h2>
     </div>
 
-    <div class="stack-list">
-        <article class="stack-card">
-            <figure class="sc-fig">
-                <img src="photos/u1532601224476.jpg" srcset="photos/u1532601224476-800.jpg 800w, photos/u1532601224476.jpg 1200w" sizes="(max-width: 1100px) 92vw, 44vw" alt="Промисловий об'єкт — інвентаризація викидів" width="900" height="620" loading="lazy" decoding="async">
-                <span class="sc-num" aria-hidden="true">01</span>
-            </figure>
-            <div class="sc-body">
-                <span class="sc-tag">Інженерія</span>
-                <h3>Дозвіл на викиди та інвентаризація</h3>
-                <div class="sc-meta">
-                    <span>Повний цикл</span>
-                    <span class="st">★ 5.0 ISO</span>
-                </div>
-                <div class="sc-price">Індивідуально <small>/ об'єкт</small></div>
-                <a href="#" class="u-link">Дізнатися більше <span class="arr">→</span></a>
+    <article class="sol-item">
+        <figure class="sol-fig r-clip">
+            <img src="photos/u1532601224476.jpg" srcset="photos/u1532601224476-800.jpg 800w, photos/u1532601224476.jpg 1200w" sizes="(max-width: 1024px) 100vw, 50vw" alt="Промисловий об'єкт — інвентаризація викидів" width="900" height="620" loading="lazy" decoding="async">
+        </figure>
+        <div class="sol-body">
+            <span class="sol-num" aria-hidden="true">01</span>
+            <span class="tag r-up">Інженерія</span>
+            <h3 class="r-up">Дозвіл на викиди та інвентаризація</h3>
+            <div class="sol-meta r-up">
+                <span>Повний цикл</span>
+                <span class="st">★ 5.0 ISO</span>
             </div>
-        </article>
+            <div class="sol-price r-up">Індивідуально <small>/ об'єкт</small></div>
+            <a href="#" class="u-link r-up">Дізнатися більше</a>
+        </div>
+    </article>
 
-        <article class="stack-card">
-            <figure class="sc-fig">
-                <img src="photos/u1615906655593.jpg" srcset="photos/u1615906655593-800.jpg 800w, photos/u1615906655593.jpg 1200w" sizes="(max-width: 1100px) 92vw, 44vw" alt="Водні ресурси — стратегія спецводокористування" width="900" height="620" loading="lazy" decoding="async">
-                <span class="sc-num" aria-hidden="true">02</span>
-            </figure>
-            <div class="sc-body">
-                <span class="sc-tag alt">Управління водними ресурсами</span>
-                <h3>Стратегія спецводокористування та скидів</h3>
-                <div class="sc-meta">
-                    <span>Гарантія погодження</span>
-                    <span class="st">★ 4.9 рейтинг</span>
-                </div>
-                <div class="sc-price">Відповідно до норм <small>/ ліцензія</small></div>
-                <a href="#" class="u-link">Дізнатися більше <span class="arr">→</span></a>
+    <article class="sol-item flip">
+        <figure class="sol-fig r-clip-alt">
+            <img src="photos/u1615906655593.jpg" srcset="photos/u1615906655593-800.jpg 800w, photos/u1615906655593.jpg 1200w" sizes="(max-width: 1024px) 100vw, 50vw" alt="Водні ресурси — стратегія спецводокористування" width="900" height="620" loading="lazy" decoding="async">
+        </figure>
+        <div class="sol-body">
+            <span class="sol-num" aria-hidden="true">02</span>
+            <span class="tag alt r-up">Управління водними ресурсами</span>
+            <h3 class="r-up">Стратегія спецводокористування та скидів</h3>
+            <div class="sol-meta r-up">
+                <span>Гарантія погодження</span>
+                <span class="st">★ 4.9 рейтинг</span>
             </div>
-        </article>
+            <div class="sol-price r-up">Відповідно до норм <small>/ ліцензія</small></div>
+            <a href="#" class="u-link r-up">Дізнатися більше</a>
+        </div>
+    </article>
 
-        <article class="stack-card">
-            <figure class="sc-fig">
-                <img src="photos/u1558618666.jpg" srcset="photos/u1558618666-800.jpg 800w, photos/u1558618666.jpg 1200w" sizes="(max-width: 1100px) 92vw, 44vw" alt="Промислова утилізація відходів та логістика" width="900" height="620" loading="lazy" decoding="async">
-                <span class="sc-num" aria-hidden="true">03</span>
-            </figure>
-            <div class="sc-body">
-                <span class="sc-tag alt2">Система управління відходами</span>
-                <h3>Промислова утилізація відходів та логістика</h3>
-                <div class="sc-meta">
-                    <span>Ціль — нуль відходів</span>
-                    <span class="st">★ 4.95 безпека</span>
-                </div>
-                <div class="sc-price">Оптимізовано <small>/ тонн</small></div>
-                <a href="#" class="u-link">Дізнатися більше <span class="arr">→</span></a>
+    <article class="sol-item">
+        <figure class="sol-fig r-clip">
+            <img src="photos/u1558618666.jpg" srcset="photos/u1558618666-800.jpg 800w, photos/u1558618666.jpg 1200w" sizes="(max-width: 1024px) 100vw, 50vw" alt="Промислова утилізація відходів та логістика" width="900" height="620" loading="lazy" decoding="async">
+        </figure>
+        <div class="sol-body">
+            <span class="sol-num" aria-hidden="true">03</span>
+            <span class="tag alt2 r-up">Система управління відходами</span>
+            <h3 class="r-up">Промислова утилізація відходів та логістика</h3>
+            <div class="sol-meta r-up">
+                <span>Ціль — нуль відходів</span>
+                <span class="st">★ 4.95 безпека</span>
             </div>
-        </article>
-    </div>
+            <div class="sol-price r-up">Оптимізовано <small>/ тонн</small></div>
+            <a href="#" class="u-link r-up">Дізнатися більше</a>
+        </div>
+    </article>
 
-    <div class="stack-foot">
-        <a href="#" class="u-link rv">Усі напрямки <span class="arr">→</span></a>
+    <div style="text-align:right; padding-top: 40px;">
+        <a href="#" class="u-link r-up">Усі напрямки →</a>
     </div>
 </section>
 
 <!-- ═══ QUOTE ═══ -->
-<section class="quote on-pine">
+<section class="quote">
     <div class="quote-bg" aria-hidden="true"></div>
-    <div class="quote-aura" aria-hidden="true"></div>
     <div class="quote-inner">
         <span class="quote-mark" aria-hidden="true">„</span>
         <blockquote>
             <p>
                 <span class="q-line"><span>Відповідність нормам — це не формальність.</span></span>
-                <span class="q-line"><span>Це <em class="ac" style="color:var(--clay)">архітектура</em> відповідального</span></span>
+                <span class="q-line"><span>Це <em style="color:var(--clay); font-style:italic;">архітектура</em> відповідального</span></span>
                 <span class="q-line"><span>підприємства.</span></span>
             </p>
         </blockquote>
@@ -331,15 +291,15 @@
     </div>
 </section>
 
-<!-- ═══ VOICES ═══ -->
+<!-- ═══ TESTIMONIALS ═══ -->
 <section class="voices">
     <div class="voices-head">
-        <span class="eyebrow rv">Перевірені промислові партнерства</span>
-        <h2 class="h-xl rv">Що кажуть наші <em class="ac">клієнти</em></h2>
+        <span class="eyebrow r-up">Перевірені промислові партнерства</span>
+        <h2 class="r-up">Що кажуть наші <em>клієнти</em></h2>
     </div>
 
     <div class="voices-grid">
-        <div class="voice-feature rv">
+        <div class="voice-feature r-up">
             <div class="stars" aria-label="5 з 5 зірок">★★★★★</div>
             <blockquote>«Jureco Consulting повністю модернізувала наш облік викидів. Їхній проєкт дозволів на спецводокористування пройшов державну експертизу з першого разу без зауважень.»</blockquote>
             <div class="byline">
@@ -352,7 +312,7 @@
         </div>
 
         <div class="voice-side">
-            <div class="voice-card rv">
+            <div class="voice-card r-up">
                 <div class="stars" aria-label="5 з 5 зірок">★★★★★</div>
                 <p>«Безперебійна координація лабораторних робіт та аудиту управління відходами. Вони перетворили складні екологічні вимоги на чіткий, безстресовий бізнес-план.»</p>
                 <div class="byline">
@@ -363,7 +323,7 @@
                     </div>
                 </div>
             </div>
-            <div class="voice-card rv">
+            <div class="voice-card r-up">
                 <div class="stars" aria-label="5 з 5 зірок">★★★★★</div>
                 <p>«Їхній аудит екологічної безпеки та охорони праці змінив нашу виробничу стратегію. Дуже надійний партнер у питаннях корпоративної сталості.»</p>
                 <div class="byline">
@@ -379,15 +339,15 @@
 </section>
 
 <!-- ═══ CTA FORM ═══ -->
-<section id="contact" class="audit on-pine">
+<section id="contact" class="audit">
     <div class="audit-grid">
         <div class="audit-copy">
-            <span class="eyebrow rv">Аудит вашого випадку</span>
-            <h2 class="h-lg rv">Забезпечте відповідність нормам для свого підприємства</h2>
-            <p class="audit-lead rv">Зв'яжіться з нашим інженерним відділом, щоб отримати негайний діагностичний аналіз ваших структурних вимог відповідно до чинного екологічного законодавства.</p>
+            <span class="eyebrow r-up">Аудит вашого випадку</span>
+            <h2 class="r-up">Забезпечте відповідність нормам для свого підприємства</h2>
+            <p class="audit-lead r-up">Зв'яжіться з нашим інженерним відділом, щоб отримати негайний діагностичний аналіз ваших структурних вимог відповідно до чинного екологічного законодавства.</p>
         </div>
 
-        <form id="cta-audit-form" class="audit-form rv" action="https://formspree.io/f/mqevwaqk" method="POST">
+        <form id="cta-audit-form" class="audit-form r-up" action="https://formspree.io/f/mqevwaqk" method="POST">
             <div class="field">
                 <label for="f-company">Назва компанії</label>
                 <input id="f-company" type="text" name="company" autocomplete="organization" required>
@@ -426,12 +386,12 @@
         </div>
     </div>
     <div class="news-inner">
-        <div class="rv">
-            <h2 class="h-lg">Підпишіться на нашу <em class="ac">аналітику</em></h2>
+        <div class="r-up">
+            <h2>Підпишіться на нашу <em>аналітику</em></h2>
             <p class="sub">Отримуйте стратегічні оновлення екологічної політики, зміни в законодавстві та корпоративні зелені практики раз на місяць.</p>
         </div>
-        <div class="news-form rv">
-            <label for="nl-email" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">Ваша робоча електронна пошта</label>
+        <div class="news-form r-up">
+            <label for="nl-email" class="visually-hidden" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">Ваша робоча електронна пошта</label>
             <input id="nl-email" type="email" placeholder="Ваша робоча електронна пошта" autocomplete="email">
             <button type="button">Підписатися →</button>
         </div>
@@ -440,11 +400,11 @@
 
 <!-- ═══ FOLLOW ═══ -->
 <section class="follow">
-    <div class="rv">
-        <h2 class="h-lg">Слідкуйте за нами</h2>
+    <div class="r-up">
+        <h2>Слідкуйте за нами</h2>
         <p>Будьте в курсі регуляторних новин та практичних кейсів</p>
     </div>
-    <div class="follow-links rv">
+    <div class="follow-links r-up">
         <a href="https://instagram.com/jureco.consulting" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
         </a>
@@ -459,15 +419,15 @@
 
 <!-- ═══ CERTS ═══ -->
 <section class="certs">
-    <div class="col rv">
+    <div class="col r-up">
         <p>Регуляторний партнер</p>
         <span class="cert-b">Державне екологічне агентство</span>
     </div>
-    <div class="col rv">
+    <div class="col r-up">
         <p>Технічна сертифікація</p>
         <span class="cert-b">ISO 14001 : 2015</span>
     </div>
-    <div class="col rv">
+    <div class="col r-up">
         <p>Методологія</p>
         <span class="cert-b">Стандарти EU BREF</span>
         <span class="cert-b">EMAS III</span>
@@ -477,7 +437,7 @@
 
 <!-- ═══ FOOTER ═══ -->
 <footer class="foot">
-    <div class="foot-word rv" aria-hidden="true">Jureco Consulting</div>
+    <div class="foot-word" aria-hidden="true">Jureco Consulting</div>
     <div class="foot-row">
         <span>© 2026 Jureco Consulting</span>
         <a href="mailto:info@jureco.com">info@jureco.com</a>
@@ -485,10 +445,7 @@
     </div>
 </footer>
 
-<script src="vendor/gsap.min.js"></script>
-<script src="vendor/ScrollTrigger.min.js"></script>
-<script src="vendor/lenis.min.js"></script>
-<script src="home-x.js"></script>
+<script src="home.js"></script>
 <script src="form-handler.js"></script>
 </body>
 </html>
