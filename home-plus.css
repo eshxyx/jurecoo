@@ -1,0 +1,307 @@
+/* ============================================================
+   JURECO — homepage refinement layer (index.html ONLY)
+   Loaded AFTER home.css. Inner pages never load this file, so
+   home.css / inner.css and every other page stay untouched.
+
+   Intent: many small, quiet decisions — depth, better type
+   rhythm, and micro-interactions that answer the pointer.
+   Nothing here should announce itself.
+   ============================================================ */
+
+:root {
+    /* depth scale, derived from the existing ink so shadows read
+       as the same family of green-black rather than neutral grey */
+    --sh-1: 0 1px 2px rgba(17, 28, 20, 0.04);
+    --sh-2: 0 6px 16px -8px rgba(17, 28, 20, 0.16);
+    --sh-3: 0 18px 36px -20px rgba(17, 28, 20, 0.26);
+    --sh-pine: 0 18px 40px -24px rgba(10, 19, 13, 0.55);
+
+    /* translucent brand tints */
+    --clay-8:  rgba(183, 92, 51, 0.08);
+    --clay-16: rgba(183, 92, 51, 0.16);
+    --moss-8:  rgba(95, 125, 92, 0.08);
+
+    /* one motion vocabulary for the whole page */
+    --t-fast: 180ms;
+    --t-mid: 280ms;
+    --t-slow: 480ms;
+    --e-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --e-soft: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── paper grain ──────────────────────────────────────────────
+   The palette is warm cream; without texture it reads flat and
+   digital. A 3% turbulence wash gives it the tooth of stock. */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 400;
+    pointer-events: none;
+    opacity: 0.035;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── typography rhythm ───────────────────────────────────── */
+h1, h2, h3, .section-title, .block-title { text-wrap: balance; }
+p, .hero-sub, .testi-text { text-wrap: pretty; }
+.hero h1 { letter-spacing: -0.03em; }
+.who-copy h2, .sol-head h2, .voices-head h2, .audit h2, .svc-head h2 { letter-spacing: -0.018em; }
+.hero-sub { line-height: 1.72; }
+.who-meta .k, .tour-price, .sol-price { font-variant-numeric: tabular-nums; }
+/* mono labels sit better with a hair more air */
+.eyebrow, .hero-kicker, .fig-cap, .hero-side, .hero-scroll,
+.cert-b, .foot-row, .who-meta .v { font-feature-settings: "kern" 1; }
+
+/* ── reveal hierarchy ─────────────────────────────────────────
+   home.css moves reveals 36px; that reads as "flying in" when
+   every block does it. Shorten the travel and let secondary
+   content arrive almost still. */
+:where(html.js) .r-up { transform: translateY(14px); transition-duration: 620ms; }
+:where(html.js) .who-meta.r-up, :where(html.js) .certs .r-up,
+:where(html.js) .follow-links.r-up, :where(html.js) .news-form.r-up {
+    transform: translateY(8px);
+}
+:where(html.js) .r-clip, :where(html.js) .r-clip-alt { transition-duration: 900ms; }
+
+/* signature: the eyebrow rule draws itself, once, on arrival */
+.eyebrow::before {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 620ms var(--e-out) 120ms;
+}
+.eyebrow.in::before, .in .eyebrow::before, html:not(.js) .eyebrow::before { transform: scaleX(1); }
+
+/* ── focus + selection ───────────────────────────────────── */
+:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; border-radius: 1px; }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.hd { transition: background var(--t-slow) var(--e-soft), height var(--t-slow) var(--e-soft), box-shadow var(--t-slow) var(--e-soft); }
+.hd.solid { box-shadow: var(--sh-1); }
+
+/* nav links get a hairline that grows from the centre */
+.hd-link { position: relative; transition: color var(--t-fast) var(--e-soft); }
+.hd-link::after {
+    content: "";
+    position: absolute;
+    left: 16px; right: 16px; bottom: 6px;
+    height: 1px;
+    background: var(--clay);
+    transform: scaleX(0);
+    transition: transform var(--t-mid) var(--e-out);
+}
+.hd-link:hover::after, .hd-item.open .hd-link::after { transform: scaleX(1); }
+
+.hd-drop {
+    box-shadow: var(--sh-3);
+    transform-origin: top center;
+    transition: opacity var(--t-mid) var(--e-out),
+                transform var(--t-mid) var(--e-out),
+                visibility var(--t-mid);
+}
+.hd-drop a .t { transition: color var(--t-fast) var(--e-soft); }
+.hd-drop a:hover .t { color: var(--clay); }
+.hd-drop a .n { transition: transform var(--t-mid) var(--e-out); }
+.hd-drop a:hover .n { transform: translateX(2px); }
+
+.hd-cta { transition: transform var(--t-fast) var(--e-soft), box-shadow var(--t-mid) var(--e-soft); }
+.hd-cta:hover { box-shadow: var(--sh-2); }
+.hd-cta:active { transform: translateY(1px); }
+
+.hd-burger span { transition: transform var(--t-mid) var(--e-out), opacity var(--t-fast); }
+
+/* ── scroll progress hairline (added by home-plus.js) ────── */
+.jp-prog {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    width: 100%;
+    background: var(--clay);
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: 130;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero-kicker .dot { transition: transform var(--t-slow) var(--e-out); display: inline-block; }
+.hero:hover .hero-kicker .dot:first-child { transform: rotate(90deg); }
+
+.btn-primary, .btn-main {
+    transition: transform var(--t-fast) var(--e-soft), box-shadow var(--t-mid) var(--e-soft);
+}
+.btn-primary:hover, .btn-main:hover { box-shadow: var(--sh-2); }
+.btn-primary:active, .btn-main:active { transform: translateY(1px) scale(0.995); }
+
+.btn-quiet .arr, .u-link .arr { transition: transform var(--t-mid) var(--e-out); }
+.btn-quiet:hover .arr, .u-link:hover .arr { transform: translateX(5px); }
+
+.hero-fig img { transition: transform 900ms var(--e-out); }
+.fig-cap { transition: color var(--t-mid) var(--e-soft); }
+
+/* the watermark drifts a few px with the pointer (home-plus.js) */
+.hero-ghost { transition: transform 900ms var(--e-soft); will-change: transform; }
+
+/* ============================================================
+   SERVICES INDEX
+   ============================================================ */
+.svc-row {
+    transition: padding-left var(--t-slow) var(--e-out),
+                background var(--t-slow) var(--e-soft);
+}
+.svc-row::before {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -1px;
+    height: 1px; width: 100%;
+    background: var(--clay);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--t-slow) var(--e-out);
+}
+.svc-row:hover::before { transform: scaleX(1); }
+.svc-row .idx { transition: color var(--t-mid) var(--e-soft), transform var(--t-mid) var(--e-out); }
+.svc-row:hover .idx { transform: translateX(2px); }
+.svc-row .name { transition: color var(--t-mid) var(--e-soft), transform var(--t-slow) var(--e-out); }
+.svc-row .go { transition: transform var(--t-mid) var(--e-out), color var(--t-mid) var(--e-soft); }
+/* the in-row preview: quicker and calmer than the default */
+.row-fig { transition: clip-path 520ms var(--e-out); }
+.row-fig img { transition: transform 900ms var(--e-out); }
+
+/* ============================================================
+   WHO WE ARE
+   ============================================================ */
+.who-fig .frame { overflow: hidden; }
+.who-fig .frame img { transition: transform 1s var(--e-out); }
+.who-fig:hover .frame img { transform: scale(1.025); }
+.who-stamp { transition: transform var(--t-slow) var(--e-out); }
+.who-fig:hover .who-stamp { transform: rotate(-6deg); }
+.who-meta .cell { transition: transform var(--t-mid) var(--e-out); }
+.who-meta .cell:hover { transform: translateY(-2px); }
+.who-meta .cell:hover .k { color: var(--clay); }
+.who-meta .k { transition: color var(--t-mid) var(--e-soft); }
+
+/* ============================================================
+   SOLUTIONS
+   ============================================================ */
+.sol-item { transition: transform var(--t-slow) var(--e-out); }
+.sol-fig { overflow: hidden; box-shadow: var(--sh-1); transition: box-shadow var(--t-slow) var(--e-soft); }
+.sol-item:hover .sol-fig { box-shadow: var(--sh-3); }
+.sol-fig img { transition: transform 1s var(--e-out); }
+.sol-item:hover .sol-fig img { transform: scale(1.035); }
+.sol-body .tag { transition: transform var(--t-mid) var(--e-out), box-shadow var(--t-mid) var(--e-soft); }
+.sol-item:hover .tag { transform: translateY(-2px); box-shadow: var(--sh-2); }
+.sol-num { transition: -webkit-text-stroke-color var(--t-slow) var(--e-soft); }
+.sol-item:hover .sol-num { -webkit-text-stroke-color: var(--clay-16); }
+.sol-item h3 { transition: color var(--t-mid) var(--e-soft); }
+.sol-meta .st { transition: transform var(--t-mid) var(--e-out); display: inline-flex; }
+.sol-item:hover .sol-meta .st { transform: translateY(-1px); }
+
+/* ============================================================
+   QUOTE — a touch of asymmetry: the mark hangs left of centre
+   ============================================================ */
+.quote-mark { margin-left: -0.42em; }
+.quote-cite { transition: letter-spacing var(--t-slow) var(--e-soft); }
+.quote:hover .quote-cite { letter-spacing: 0.34em; }
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+.testi-card, .voice-card, .voice-feature {
+    transition: transform var(--t-mid) var(--e-out), box-shadow var(--t-slow) var(--e-soft);
+}
+.voice-card:hover, .testi-card:hover { transform: translateY(-3px); box-shadow: var(--sh-3); }
+.byline .ava, .testi-avatar { transition: transform var(--t-mid) var(--e-out); }
+.voice-card:hover .ava, .testi-card:hover .testi-avatar { transform: scale(1.06) rotate(-3deg); }
+.stars, .testi-stars { transition: letter-spacing var(--t-slow) var(--e-soft); }
+.voice-card:hover .stars, .voice-feature:hover .stars { letter-spacing: 0.36em; }
+
+/* ============================================================
+   AUDIT FORM
+   ============================================================ */
+.audit-form input, .audit-form textarea {
+    transition: border-color var(--t-mid) var(--e-soft), background var(--t-mid) var(--e-soft);
+}
+.audit-form input:hover, .audit-form textarea:hover { border-color: rgba(245, 242, 234, 0.4); }
+.audit-form .field { position: relative; }
+/* a clay rule that grows under the focused field */
+.audit-form .field::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 1px;
+    background: var(--clay);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--t-slow) var(--e-out);
+}
+.audit-form .field:focus-within::after { transform: scaleX(1); }
+.btn-submit { transition: transform var(--t-fast) var(--e-soft), box-shadow var(--t-mid) var(--e-soft); }
+.btn-submit:hover { box-shadow: var(--sh-pine); }
+.btn-submit:active { transform: translateY(1px) scale(0.995); }
+.form-status { transition: color var(--t-mid) var(--e-soft); }
+
+/* ============================================================
+   NEWSLETTER / FOLLOW / CERTS / FOOTER
+   ============================================================ */
+.news-form { transition: border-color var(--t-mid) var(--e-soft); }
+.news-form:focus-within { border-color: var(--clay); }
+.news-form button { transition: transform var(--t-mid) var(--e-out), color var(--t-fast); }
+
+.follow-links a {
+    transition: background var(--t-mid) var(--e-soft), color var(--t-mid) var(--e-soft),
+                border-color var(--t-mid) var(--e-soft), transform var(--t-mid) var(--e-out),
+                box-shadow var(--t-slow) var(--e-soft);
+}
+.follow-links a:hover { transform: translateY(-3px); box-shadow: var(--sh-2); }
+.follow-links svg { transition: transform var(--t-mid) var(--e-out); }
+.follow-links a:hover svg { transform: scale(1.08); }
+
+.cert-b { transition: border-color var(--t-mid) var(--e-soft), color var(--t-mid) var(--e-soft), transform var(--t-mid) var(--e-out); }
+.cert-b:hover { border-color: var(--clay); color: var(--clay); transform: translateY(-2px); }
+
+.foot-row a { position: relative; }
+.foot-row a::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -3px;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--t-mid) var(--e-out);
+}
+.foot-row a:hover::after { transform: scaleX(1); transform-origin: left; }
+
+/* ============================================================
+   MOBILE — drop pointer-dependent effects, keep it calm
+   ============================================================ */
+@media (hover: none) {
+    .svc-row:hover { padding-left: 4px; background: transparent; }
+    .svc-row:hover::before { transform: scaleX(0); }
+    .who-fig:hover .who-stamp { transform: none; }
+    .quote:hover .quote-cite { letter-spacing: 0.32em; }
+    body::after { opacity: 0.025; }
+}
+
+@media (max-width: 760px) {
+    .hero-ghost { transform: none !important; }
+    /* thumb-friendly: give the mono labels a little more size */
+    .who-meta .v, .fig-cap { font-size: 0.66rem; }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    .jp-prog { display: none; }
+    .eyebrow::before { transform: scaleX(1) !important; transition: none; }
+    .hero-ghost { transform: none !important; }
+    *, *::before, *::after { transition-duration: 0.01ms !important; }
+}
