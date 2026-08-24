@@ -1076,9 +1076,21 @@ a.pill:hover { opacity: 0.82; }
 .approval-panel p { font-size: 0.96rem; }
 .approval-list li { font-size: 0.9rem; }
 
-/* content sections get a consistent inner measure */
+/* Two-column content sections used to be capped at 1380px while every
+   neighbouring section ran the full width inside the gutter. On a wide
+   screen that left them inset by ~316px against the stats row's 64px,
+   so they read as cramped. They now align with the rest of the page;
+   paragraphs keep their own 62ch measure, so line length is unaffected. */
 .definition-block, .def-block, .scope-def-block, .monitoring-block,
-.facts-block, .help-block { max-width: 1380px; margin-left: auto; margin-right: auto; }
+.facts-block, .help-block { max-width: 1720px; margin-left: auto; margin-right: auto; }
+
+/* The width/height attributes on these images (added to reserve space and
+   stop layout shift) map to presentational hints. A definite height makes
+   the browser ignore aspect-ratio, which rendered every framed photo far
+   taller than designed. height:auto hands control back to aspect-ratio
+   while the attributes still reserve the correct space during load. */
+.img-bordered img, .img-frame img, .img-frame-tall img, .img-frame-wide img,
+.hero-img-frame img, .hero-img-wrap img, .help-img-main { height: auto; }
 
 /* ── page hero: ghost word + choreographed load ─────────── */
 .eia-hero, .iep-hero, .sea-hero, .lwmp-hero, .mep-hero, .cds-hero { overflow: hidden; }
