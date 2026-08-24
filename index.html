@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jureco Consulting — Еко-консалтинг та стратегічні послуги</title>
+    <meta name="description" content="Jureco Consulting супроводжує підприємства на шляху до повної відповідності екологічним нормам, безпеки ресурсів та ефективного управління відходами.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -391,11 +392,13 @@
             <h2>Підпишіться на нашу <em>аналітику</em></h2>
             <p class="sub">Отримуйте стратегічні оновлення екологічної політики, зміни в законодавстві та корпоративні зелені практики раз на місяць.</p>
         </div>
-        <div class="news-form r-up">
+        <form id="nl-form" class="news-form r-up" action="https://formspree.io/f/mqevwaqk" method="POST">
             <label for="nl-email" class="visually-hidden" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">Ваша робоча електронна пошта</label>
-            <input id="nl-email" type="email" placeholder="Ваша робоча електронна пошта" autocomplete="email">
-            <button type="button">Підписатися →</button>
-        </div>
+            <input id="nl-email" type="email" name="email" placeholder="Ваша робоча електронна пошта" autocomplete="email" required>
+            <input type="hidden" name="_subject" value="Нова підписка на аналітику — JURECO">
+            <button type="submit">Підписатися →</button>
+        </form>
+        <p class="nl-status" role="status" aria-live="polite"></p>
     </div>
 </section>
 

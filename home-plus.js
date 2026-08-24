@@ -68,7 +68,46 @@
         requestAnimationFrame(frame);
     }
 
-    /* ── 3. the hero watermark leans toward the pointer ───────
+    /* ── 3. newsletter signup ────────────────────────────────
+       The button used to be a bare <button type="button"> with
+       nothing listening: you typed an address, clicked, and the
+       page did nothing at all. It now posts to the same Formspree
+       endpoint as the audit form and reports back.            */
+    var nlForm = document.getElementById('nl-form');
+    var nlStatus = document.querySelector('.nl-status');
+    if (nlForm) {
+        nlForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var btn = nlForm.querySelector('button');
+            var idle = btn.textContent;
+            btn.disabled = true;
+            btn.textContent = 'Надсилання...';
+            if (nlStatus) { nlStatus.textContent = ''; nlStatus.className = 'nl-status'; }
+
+            fetch(nlForm.action, {
+                method: 'POST',
+                body: new FormData(nlForm),
+                headers: { 'Accept': 'application/json' }
+            }).then(function (r) {
+                if (!r.ok) throw new Error('failed');
+                nlForm.reset();
+                if (nlStatus) {
+                    nlStatus.textContent = 'Дякуємо! Ви підписані на нашу аналітику.';
+                    nlStatus.className = 'nl-status success';
+                }
+            }).catch(function () {
+                if (nlStatus) {
+                    nlStatus.textContent = 'Не вдалося підписатися. Спробуйте ще раз або напишіть на info@jureco.com.';
+                    nlStatus.className = 'nl-status error';
+                }
+            }).then(function () {
+                btn.disabled = false;
+                btn.textContent = idle;
+            });
+        });
+    }
+
+    /* ── 4. the hero watermark leans toward the pointer ───────
        A few pixels only — enough that the page feels aware of
        the cursor without anyone noticing why.                */
     var ghost = document.querySelector('.hero-ghost');

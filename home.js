@@ -46,29 +46,39 @@
     onScrollHd();
 
     /* ── dropdowns (hover on desktop, click everywhere) ─────── */
+    /* open state is mirrored to aria-expanded so screen readers are
+       told whether the panel is showing, not just sighted users */
+    function setOpen(item, open) {
+        item.classList.toggle('open', open);
+        var b = item.querySelector('.hd-link');
+        if (b) b.setAttribute('aria-expanded', String(open));
+    }
+    function closeAllDrops() {
+        document.querySelectorAll('.hd-item').forEach(function (i) { setOpen(i, false); });
+    }
+
     document.querySelectorAll('.hd-item').forEach(function (item) {
         var btn = item.querySelector('.hd-link');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
         if (fine) {
-            item.addEventListener('mouseenter', function () { item.classList.add('open'); });
-            item.addEventListener('mouseleave', function () { item.classList.remove('open'); });
+            item.addEventListener('mouseenter', function () { setOpen(item, true); });
+            item.addEventListener('mouseleave', function () { setOpen(item, false); });
         }
         if (btn) {
             btn.addEventListener('click', function (e) {
                 if (btn.tagName === 'BUTTON') e.preventDefault();
                 var was = item.classList.contains('open');
-                document.querySelectorAll('.hd-item').forEach(function (i) { i.classList.remove('open'); });
-                if (!was) item.classList.add('open');
+                closeAllDrops();
+                if (!was) setOpen(item, true);
             });
         }
     });
     document.addEventListener('click', function (e) {
-        if (!e.target.closest('.hd-item')) {
-            document.querySelectorAll('.hd-item').forEach(function (i) { i.classList.remove('open'); });
-        }
+        if (!e.target.closest('.hd-item')) closeAllDrops();
     });
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
-            document.querySelectorAll('.hd-item').forEach(function (i) { i.classList.remove('open'); });
+            closeAllDrops();
             document.body.classList.remove('menu-open');
         }
     });

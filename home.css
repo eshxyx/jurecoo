@@ -180,6 +180,19 @@ body.loaded .w-mask > span { transform: translateY(0); }
     transition: opacity 0.28s var(--ease-out), transform 0.28s var(--ease-out), visibility 0.28s;
 }
 .hd-item.open .hd-drop { opacity: 1; visibility: visible; transform: none; }
+/* The panel hangs 14px below the button; that strip belongs to neither,
+   so a slowly moving pointer crossing it left .hd-item and the menu
+   closed under the cursor. This invisible bridge is a descendant of
+   .hd-item, so button -> panel never counts as leaving. It inherits the
+   panel's visibility, so it cannot intercept anything while closed. */
+.hd-drop::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -18px;
+    height: 18px;
+}
 
 .hd-drop-label {
     font-family: var(--font-mono);
