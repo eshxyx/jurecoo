@@ -102,6 +102,20 @@ p, .hero-sub, .testi-text { text-wrap: pretty; }
                 transform var(--t-mid) var(--e-out),
                 visibility var(--t-mid);
 }
+/* The panel hangs 14px below the button, and that gap belongs to
+   neither of them — a slowly moving pointer crossing it left
+   .hd-item entirely and the menu closed under the cursor.
+   This invisible bridge is a descendant of .hd-item, so travelling
+   from the button to the panel never counts as leaving.
+   Only present while the panel is open (it inherits visibility). */
+.hd-drop::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -18px;
+    height: 18px;
+}
 .hd-drop a .t { transition: color var(--t-fast) var(--e-soft); }
 .hd-drop a:hover .t { color: var(--clay); }
 .hd-drop a .n { transition: transform var(--t-mid) var(--e-out); }
