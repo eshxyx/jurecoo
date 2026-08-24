@@ -132,6 +132,21 @@ p, .hero-sub, .testi-text { text-wrap: pretty; }
 /* ============================================================
    HERO
    ============================================================ */
+/* The hero grid bottom-aligned its text column inside a 100svh
+   section, so every spare pixel collected above the kicker — 530px
+   (46% of the viewport) on a tall screen, and worse the taller it got.
+   Centring the column distributes that space instead of dumping it at
+   the top. Desktop only: below 1025px the hero is already auto-height
+   and single-column, and its spacing is fine. */
+@media (min-width: 1025px) {
+    .hero {
+        align-items: center;
+        padding-top: calc(var(--hd-h, 76px) + clamp(16px, 3.5vh, 48px));
+        padding-bottom: clamp(24px, 5vh, 60px);
+    }
+    .hero-copy { padding-bottom: 0; }
+}
+
 .hero-kicker .dot { transition: transform var(--t-slow) var(--e-out); display: inline-block; }
 .hero:hover .hero-kicker .dot:first-child { transform: rotate(90deg); }
 
